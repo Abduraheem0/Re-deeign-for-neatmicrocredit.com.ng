@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.E.A.T Asset Fund - Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #F8F9FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .main {
+            display: flex;
+            gap: 90px;
+        }
+        
+        /* Yellow Calculator Panel - Exact match */
+        .calculator {
+            background: #f8f512;
+            width: 600px;
+            padding: 35px 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            height: 500px;
+        }
+        
+        .calculator h1 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 28px;
+        }
+        
+        /* Amount Section */
+        .amount-section {
+            margin-bottom: 38px;
+        }
+        
+        .amount-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .amount-value {
+            background: #FFFFFF;
+            border: none #111111;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 12px auto 18px;
+            width: 140px;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 8px;
+            background: #D1D5DB;
+            border-radius: 9999px;
+            outline: none;
+            -webkit-appearance: none;
+            position: relative;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 26px;
+            height: 26px;
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        /* Weeks Section */
+        .weeks-section {
+            margin-top: 12px;
+        }
+        
+        .weeks-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .weeks-value {
+            background: #FFFFFF;
+            border: none #111111;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            margin: 12px auto 18px;
+            width: 140px;
+        }
+        
+        /* Repayment Info */
+        .repayment {
+            margin-top: 30px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+        
+        .repayment-amount {
+            font-weight: 700;
+        }
+        
+        .total-pay {
+            font-size: 23px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        
+        /* Right Side */
+        .right {
+          margin-top: 50px;
+            padding-top: 40px;
+            max-width: 680px;
+        }
+        
+        .right h2 {
+            font-size: 26px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .apply-btn {
+            border: 2px solid #312E81;
+            color: #312E81;
+            background: transparent;
+            padding: 14px 36px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .apply-btn:hover {
+            background: #312E81;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Left: Yellow Calculator -->
+        <div class="calculator">
+            <h1>Calculate the Amount<br>You Need?</h1>
+            
+            <!-- Amount -->
+            <div class="amount-section">
+                <div class="amount-labels">
+                    <span>₦50,000</span>
+                    <span>₦1,000,000</span>
+                </div>
+                <div class="amount-value" id="amountDisplay">₦500,000</div>
+                <input type="range" class="slider" id="amountSlider" 
+                       min="50000" max="1000000" value="500000" step="1000">
+            </div>
+            
+            <!-- Weeks -->
+            <div class="weeks-section">
+                <div class="weeks-labels">
+                    <span>1 weeks</span>
+                    <span>24 weeks</span>
+                </div>
+                <div class="weeks-value" id="weeksDisplay">10 weeks</div>
+                <input type="range" class="slider" id="weeksSlider" 
+                       min="1" max="24" value="10" step="1">
+            </div>
+            
+            <!-- Results -->
+            <div class="repayment">
+                Your repayments is <span class="repayment-amount" id="repayment">₦19,500</span> every weeks at <span id="rate">30%</span><br>
+                <span class="total-pay">Total you will Pay: <span id="total">₦650,000</span></span>
+            </div>
+        </div>
+        
+        <!-- Right Side -->
+        <div class="right">
+            <h2>Grow and expand your business with<br>N.E.A.T Asset Fund.</h2>
+            <button class="apply-btn" onclick="alert('Apply Now - Form would open here')">Apply Now</button>
+        </div>
+    </div>
+
+    <script>
+        const amountSlider = document.getElementById('amountSlider');
+        const weeksSlider = document.getElementById('weeksSlider');
+        const amountDisplay = document.getElementById('amountDisplay');
+        const weeksDisplay = document.getElementById('weeksDisplay');
+        const repaymentEl = document.getElementById('repayment');
+        const totalEl = document.getElementById('total');
+        
+        function updateValues() {
+            const principal = parseFloat(amountSlider.value);
+            const weeks = parseInt(weeksSlider.value);
+            
+            // Amount display
+            amountDisplay.textContent = '₦' + principal.toLocaleString('en-US');
+            
+            // Weeks display
+            weeksDisplay.textContent = weeks + ' weeks';
+            
+            // Calculation: Flat 30% interest
+            const total = Math.round(principal * 1.3);
+            const weeklyPayment = Math.round(total / weeks);
+            
+            repaymentEl.textContent = '₦' + weeklyPayment.toLocaleString('en-US');
+            totalEl.textContent = '₦' + total.toLocaleString('en-US');
+        }
+        
+        amountSlider.addEventListener('input', updateValues);
+        weeksSlider.addEventListener('input', updateValues);
+        
+        // Initialize
+        updateValues();
+    </script>
+</body>
+</html>
