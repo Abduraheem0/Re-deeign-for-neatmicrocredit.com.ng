@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+            
 
 *{
     margin:0;
@@ -376,6 +377,10 @@ body{
 
 
 
+
+
+
+
 /* =========================
    FUND CALCULATOR
 ========================= */
@@ -388,7 +393,6 @@ body{
     padding:40px 4%;
     background:#f3f3f3;
     padding: 10px;
-    background: white;
 }
 
 /* LEFT SIDE */
@@ -463,243 +467,104 @@ body{
 
 
 
-/*========== Form ==============*/
 
-  .form {
-    max-width: 940px;
-    padding-left: 70px;
-    padding-top: 30PX;
-  }
 
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 240px;
-    margin-bottom: 28px;
-  }
 
-  .field {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .field label {
-    font-size: 16px;
-    font-weight: 700;
-    color: #55617a;
-    margin-bottom: 8px;
-  }
 
-  .required {
-    color: #e02424;
-    margin-left: 2px;
-  }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px;
-    font-family: inherit;
-    color: #333;
-    border: 1px solid #c9c9c9;
-    border-radius: 3px;
-    padding: 9px 12px;
-    background: #ffffff;
-    width: 100%;
-  }
 
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #7aa7e0;
-    box-shadow: 0 0 0 3px rgba(122,167,224,0.25);
-  }
 
-  /* ---- Name row ---- */
-  .name-fields {
-    display: flex;
-    gap: 20px;
-  }
-  .name-fields .sub-field {
-    display: flex;
-    flex-direction: column;
-    width: 210px;
-  }
-  .name-fields .sub-field span {
-    font-size: 14px;
-    color: #3f6fd1;
-    margin-top: 6px;
-  }
 
-  /* ---- Location dropdown + suggestion ---- */
-  .select-wrap {
+/*=========================
+      SAVINGS HERO
+==========================*/
+
+.savings-hero{
     position: relative;
-  }
-  .select-wrap select {
-    appearance: none;
-    -webkit-appearance: none;
-    color: #9a9a9a;
-    cursor: pointer;
-  }
-  .select-wrap::after {
-    content: "";
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 7px solid #666;
-    transform: translateY(-40%);
-    pointer-events: none;
-  }
-  .location-suggestion {
-    font-size: 16px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 10px;
-  }
-
-  /* ---- Phone field ---- */
-  .phone-wrap {
+    background: url("../images/saving.png") center/cover no-repeat;
+    height: 430px;
     display: flex;
     align-items: center;
-    border: 1px solid #c9c9c9;
-    border-radius: 3px;
-    padding: 0 12px;
-    background: #ffffff;
-  }
-  .phone-wrap:focus-within {
-    border-color: #7aa7e0;
-    box-shadow: 0 0 0 3px rgba(122,167,224,0.25);
-  }
-  .flag-ng {
-    display: flex;
-    width: 24px;
-    height: 16px;
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-  .flag-ng span {
-    flex: 1;
-    height: 100%;
-  }
-  .flag-ng span:nth-child(1) { background: #008751; }
-  .flag-ng span:nth-child(2) { background: #ffffff; }
-  .flag-ng span:nth-child(3) { background: #008751; }
-  .phone-wrap::before {
-    content: "";
-  }
-  .phone-caret {
-    color: #888;
-    font-size: 10px;
-    margin-right: 10px;
-  }
-  .phone-wrap input {
-    border: none;
-    padding: 9px 0;
-    flex: 1;
-  }
-  .phone-wrap input:focus {
-    outline: none;
-    box-shadow: none;
-  }
+}
 
-  /* ---- Checkboxes ---- */
-  .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 4px;
-  }
-  .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .checkbox-item input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin: 0;
-  }
-  .checkbox-item label {
-    font-size: 16px;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 0;
-  }
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
 
-  /* ---- Amount field with spinner ---- */
-  .full-width {
-    grid-column: 1 / span 2;
-    max-width: 570px;
-  }
-  .amount-wrap {
-    position: relative;
-    display: flex;
-  }
-  .amount-wrap input {
-    padding-right: 34px;
-  }
-  .amount-wrap input::-webkit-outer-spin-button,
-  .amount-wrap input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  .amount-wrap input[type=number] {
-    -moz-appearance: textfield;
-  }
-  .spinner {
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #c9c9c9;
-  }
-  .spinner button {
-    flex: 1;
-    border: none;
-    background: #f7f7f7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0;
-    color: #777;
-  }
-  .spinner button:first-child { border-bottom: 1px solid #c9c9c9; }
-  .spinner button svg { width: 9px; height: 9px; }
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 48px;
+}
 
-  .helper-text {
-    font-size: 14px;
-    color: #55617a;
-    margin-top: 8px;
-  }
+/* Left */
 
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
+.hero-left{
+    width:46%;
+    color:#fff;
+}
 
-  @media (max-width: 720px) {
-    .form-row { grid-template-columns: 1fr; }
-    .full-width { grid-column: 1; max-width: 100%; }
-  }
+.hero-left h1{
+    font-size:38px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
+}
 
-  .submit button{
-    
-    height: 50px;
-    width: 150px;
-    margin-top: -200px;
-    margin-bottom: 30px;
-    border: none;
-  }
+.hero-left p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* Right */
+
+.requirements-box{
+    width:48%;
+    background:#fff;
+    border-radius:18px;
+    padding:25px 30px;
+}
+
+.requirements-box h2{
+    color:#2f16b3;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.requirement{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.tick{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#2f16b3;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.requirement p{
+    color:#2f16b3;
+    font-size:18px;
+    font-weight:700;
+    line-height:1.5;
+}
 
 
 
@@ -708,8 +573,160 @@ body{
 
 
 
-  /*=========Footer============*/
 
+
+
+
+
+/* =========Calculator================*/
+        .main {
+            margin-left: 70px;
+            display: flex;
+            gap: 90px;
+            margin-right: 10px;
+        }
+        
+        /* Yellow Calculator Panel - Exact match */
+        .calculator {
+            background: #f8f512;
+            width: 600px;
+            padding: 35px 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+        
+        .calculator h1 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 28px;
+        }
+        
+        /* Amount Section */
+        .amount-section {
+            margin-bottom: 38px;
+        }
+        
+        .amount-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .amount-value {
+            background: #f8f512;
+            border: none #111111;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 12px auto 18px;
+            width: 140px;
+            margin-top: -50px;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 8px;
+            background: #D1D5DB;
+            border-radius: 9999px;
+            outline: none;
+            -webkit-appearance: none;
+            position: relative;
+            
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 26px;
+            height: 26px;
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        /* Weeks Section */
+        .weeks-section {
+            margin-top: 12px;
+        }
+        
+        .weeks-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .weeks-value {
+            background: #f8f512;
+            border: none #111111;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 12px auto 18px;
+            width: 140px;
+             margin-top: -50px;
+        }
+        
+        /* Repayment Info */
+        .repayment {
+            margin-top: 30px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+        
+        .repayment-amount {
+            font-weight: 700;
+        }
+        
+        .total-pay {
+            font-size: 23px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        
+        /* Right Side */
+        .right {
+          margin-top: 50px;
+            padding-top: 40px;
+            max-width: 680px;
+        }
+        
+        .right h2 {
+            font-size: 26px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .apply-btn {
+            border: 2px solid #312E81;
+            color: #312E81;
+            background: transparent;
+            padding: 14px 36px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .apply-btn:hover {
+            background: #312E81;
+            color: white;
+        }
+
+
+
+/*=============Footer==================*/
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -939,186 +956,81 @@ body{
 
 
 
-     
-/* =========================================================
-   GLOBAL RESPONSIVE LAYER
-   Add-on rules only — nothing above this is modified.
-========================================================= */
 
-body {
-    overflow-x: hidden;
-}
 
-/* ---------- Mobile nav toggle button ---------- */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-}
-.nav-toggle span {
-    width: 26px;
-    height: 3px;
-    background: #2f16b3;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* =========================================================
-   BREAKPOINT: <= 900px  (tablets / large phones)
-========================================================= */
-@media (max-width: 900px) {
 
-    /* --- Navbar becomes a slide-down mobile menu --- */
-    .top-header {
-        display: none;
-    }
-    .navbar {
-        flex-wrap: wrap;
-        padding: 14px 5%;
-       
-    }
-    .nav-toggle {
-        display: flex;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        gap: 0;
-        margin-top: 14px;
-        border-top: 1px solid #eee;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .nav-links a {
-        width: 100%;
-        padding: 14px 4px;
-        border-bottom: 1px solid #eee;
-        opacity: 1;
-    }
-    .menu-container {
-        width: 100%;
-        
-    }
-    .menu-btn {
-        width: 100%;
-        justify-content: space-between;
-        padding: 14px 4px;
-        border-bottom: 1px solid #eee;
-        border-radius: 0;
-    }
-    .dropdown {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        margin-top: 0;
-        padding-top: 0;
-        border-radius: 0;
-        background: #fafafa;
-    }
-    .menu-container:hover .dropdown {
-        display: none; /* hover doesn't apply on touch; controlled by click below if you want it */
-    }
-    .search-icon, .site-search {
-        width: auto;
-        align-self: flex-start;
-        margin: 10px 4px;
-    }
-    /* --- Footer --- */
-    .footer-badges {
-        padding-left: 0;
-        justify-content: center;
-    }
-    .map-wrap {
-        max-width: 100%;
-        height: 260px;
-    }
-    .footer-bottom {
-        width: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 30px;
-    }
-    .last-part {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 20px;
-    }
-    .right-last-part {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        padding-right: 0;
-    }
-}
 
-/* =========================================================
-   BREAKPOINT: <= 600px  (phones)
-========================================================= */
-@media (max-width: 600px) {
 
-    /* --- Top header --- */
-    .top-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    .country-btn {
-        font-size: 13px;
-    }
 
-    /* --- Search panel shouldn't overflow the screen --- */
-    .site-search-panel {
-        width: 88vw;
-        right: -12px;
-    }
-    .country-list {
-        min-width: 160px;
-        max-width: 80vw;
-    }
-   
-    /* --- Footer --- */
-    .badge-box img {
-        width: 80px;
-        height: 80px;
-    }
-    .footer-col h4 {
-        font-size: 20px;
-    }
-    .footer-logo {
-        width: 70px;
-        height: 70px;
-    }
-}
 
-/* =========================================================
-   BREAKPOINT: <= 420px  (small phones)
-========================================================= */
-@media (max-width: 420px) {
-    .collage {
-        zoom: 0.42;
-    }
-    .whatsapp-chat {
-        width: 54px;
-        height: 54px;
-        right: 14px;
-        bottom: 14px;
-    }
-    .chat-label {
-        display: none;
-    }
-}
+
+  
+@media (max-width: 900px){
+  body{ overflow-x:clip; }
+  img{ max-width:100%; height:auto; }
+
  
+
+  body.menu-open{ overflow:hidden; }
+  .site-search-panel{ right:0; left:auto; width:min(86vw,320px); }
+
+  /* FUND INTRO */
+  .fund-section{ flex-direction:column; gap:16px; padding:24px 18px; }
+  .fund-left,.fund-right{ width:100% !important; padding:0 !important; }
+  .fund-left h1{ font-size:clamp(24px,7vw,30px); margin-bottom:14px; }
+  .fund-left > p{ font-size:15px; }
+  .fund-right h2{ font-size:17px; margin-bottom:10px; }
+  .line{ width:100%; }
+
+  /* HERO */
+  .savings-hero{ height:auto; padding:40px 0; background-attachment:scroll; }
+  .hero-content{ flex-direction:column; align-items:stretch; gap:24px; padding:0 18px; }
+  .hero-left,.requirements-box{ width:100% !important; }
+  .hero-left h1{ font-size:clamp(24px,7.5vw,32px); }
+  .hero-left p{ font-size:14px; line-height:1.7; }
+  .requirements-box{ padding:20px 18px; }
+  .requirement{ gap:12px; margin-bottom:16px; }
+  .tick{ width:32px; height:32px; font-size:16px; }
+  .requirement p{ font-size:15px; }
+
+  /* CALCULATOR */
+  .main{ flex-direction:column; gap:28px; margin:0 !important; padding:28px 18px; }
+  .calculator{ width:100% !important; height:auto !important; padding:24px 18px; }
+  .calculator h1{ font-size:clamp(22px,6.5vw,28px); }
+  .amount-value,.weeks-value{ font-size:24px; }
+  .amount-labels,.weeks-labels{ font-size:13px; }
+  .repayment{ font-size:15px; }
+  .total-pay{ font-size:18px; }
+  .slider{ width:100%; }
+  .right{ max-width:100% !important; margin:0 !important; padding:0 !important; }
+  .right h2{ font-size:20px; margin-bottom:18px; }
+  .apply-btn{ width:100%; padding:14px 20px; }
+
+  /* FOOTER */
+  .footer{ padding:34px 18px 40px !important; }
+  .footer-grid{ grid-template-columns:1fr !important; gap:26px; }
+  .footer-middle{ grid-template-columns:1fr !important; }
+  .footer-badges{ flex-wrap:wrap; gap:12px; }
+  .footer-map,.map-wrap{ width:100% !important; }
+  .map-wrap iframe,.map-wrap img{ width:100% !important; height:260px !important; }
+  .map-wrap > *{ max-width:100% !important; }
+  .map-wrap iframe{ min-width:100% !important; }
+  .footer-bottom{ width:100% !important; margin-top:10px !important; flex-wrap:wrap; justify-content:center; }
+  .last-part{ flex-direction:column; gap:10px; text-align:center; padding:16px 0; }
+  .left-last-part,.right-last-part{ padding:0 16px !important; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+}
+@media (max-width:480px){
+  .top-btn{ font-size:11px; padding:5px 10px; }
+  .logo-text h2{ font-size:16px; }
+  .tick{ width:28px; height:28px; font-size:14px; }
+}
+
+
+
+
+
+
 
 
  /*=================Media fix using AI==============================*/
@@ -1186,11 +1098,17 @@ html{
 @media (max-width:768px){
 
     .top-header{
-      display: none;
         flex-direction:column;
         align-items:center;
         text-align:center;
         padding:15px;
+    }
+
+    .top-left,
+    .top-right{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
     }
 
     .navbar{
@@ -1483,21 +1401,23 @@ html{
 
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
+
+
     </style>
 </head>
 <body>
-    
 
 <!-- =========================  TOP HEADER    ======================== -->
 
 <div class="top-header">
-  <div class="top-left">
-      <div class="country-dropdown">
-        <button class="country-btn" onclick="toggleCountryMenu()">
-          <img id="selectedFlag" class="flag-icon" src="https://flagcdn.com/24x18/ng.png" alt="">
-          <span id="selectedCountry">Nigeria</span>
-          <span class="country-caret">▾</span>
-      </button>
+
+    <div class="top-left">
+        <div class="country-dropdown">
+  <button class="country-btn" onclick="toggleCountryMenu()">
+  <img id="selectedFlag" class="flag-icon" src="https://flagcdn.com/24x18/ng.png" alt="">
+  <span id="selectedCountry">Nigeria</span>
+  <span class="country-caret">▾</span>
+</button>
 
   <ul class="country-list" id="countryList">
   <li onclick="selectCountry('ng','Nigeria')"><img class="flag-icon" src="https://flagcdn.com/24x18/ng.png" alt=""> Nigeria</li>
@@ -1573,49 +1493,56 @@ html{
 <!-- =========================
      NAVBAR
 ========================= -->
+
 <nav class="navbar">
 
-  <div class="site-search">
-    <button class="search-icon" onclick="toggleSiteSearch()" aria-label="Search">⌕</button>
-    <div class="site-search-panel" id="siteSearchPanel">
-      <input type="text" id="siteSearchInput" placeholder="Search the site... (e.g. loan, savings, career)"
-        autocomplete="off" oninput="runSiteSearch()" onkeydown="handleSiteSearchKey(event)">
-      <ul class="site-search-results" id="siteSearchResults"></ul>
+    <div class="logo-section">
+
+        <img src="../images/logo.png" class="logo">
+
+        <div class="logo-text">
+            <h2>N.E.A.T MICROREDIT</h2>
+            <p>...Changing the face of business in Africa</p>
+        </div>
+
     </div>
-  </div>
 
-  <div class="logo-section">
-    <img src="logo.png" class="logo">
-    <div class="logo-text">
-      <h2>N.E.A.T MICROREDIT</h2>
-      <p>...Changing the face of business in Africa</p>
-    </div>
-  </div>
+    <div class="nav-links">
 
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <div class="nav-links" id="navLinks">
-    <button class="nav-close" id="navClose" aria-label="Close menu">&#10005;</button>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="menu-container">
-      <button class="menu-btn">N.E.A.T Products<span class="menu-btn-arrow">⌄</span></button>
-      <button class="submenu-toggle" aria-label="Toggle products submenu">▾</button>
-      <div class="dropdown" id="dropdownMenu">
-        <a href="products.html">N.E.A.T Products</a>
-        <a href="saving.html">Savings</a>
-        <a href="advisory.html">Business Advisory</a>
-        <a href="equity.html">Equity Investment</a>
-        <a href="termDeposit.html">Term Deposit</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+      <div class="menu-container">
+        <button class="menu-btn">N.E.A.T Products<span class="menu-btn-arrow">▾</span></button>
+         <div class="dropdown" id="dropdownMenu">
+          <a href="products.html">N.E.A.T Products</a>
+          <a href="saving.html">Savings</a>
+          <a href="advisory.html">Business Advisory</a>
+          <a href="equi ">Equity Investment</a>
+          <a href="termDeposit.html">Term Deposit</a>
+        </div>
       </div>
-    </div>
-    <a href="career.html">Career</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="get.html">Get a Loan</a>
+
+        <a href="career.html">Career</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="get.html">Get a Loan</a>
+
+        <div class="site-search">
+  <button class="search-icon" onclick="toggleSiteSearch()" aria-label="Search">⌕</button>
+
+  <div class="site-search-panel" id="siteSearchPanel">
+    <input
+      type="text"
+      id="siteSearchInput"
+      placeholder="Search the site... (e.g. loan, savings, career)"
+      autocomplete="off"
+      oninput="runSiteSearch()"
+      onkeydown="handleSiteSearchKey(event)"
+    >
+    <ul class="site-search-results" id="siteSearchResults"></ul>
   </div>
-       
+</div>
+
+    </div>
 
 </nav>
 
@@ -1623,13 +1550,20 @@ html{
 
 
 
-  <!-- =========================
+
+
+
+
+
+
+
+      <!-- =========================
      FUND CALCULATOR SECTION
 ========================= -->
 
 <section class="fund-section">
     <div class="fund-left">
-        <h1>Investment Form</h1>
+        <h1>Micro Fund</h1>
     </div>
 
     <!-- RIGHT CALCULATOR -->
@@ -1640,143 +1574,118 @@ html{
     </div>
 </section>
 <hr class="line">
+<br>
 
 
 
 
-<form class="form">
 
-  <div class="form-row">
-    <div class="field">
-      <label>Name<span class="required">*</span></label>
-      <div class="name-fields">
-        <div class="sub-field">
-          <input type="text" name="first_name">
-          <span>First</span>
+<section class="savings-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+
+        <!-- Left Side -->
+        <div class="hero-left">
+
+            <h1>
+                Micro Fund
+                Eligibility
+            </h1>
+
+            <p>
+                Micro Fund is a quick loan designed for urgent financing needs. 
+                Immediately <br> available in the branch, our clients and customers will 
+                just <br> have to go there and be disbursed.
+            </p>
+
         </div>
-        <div class="sub-field">
-          <input type="text" name="last_name">
-          <span>Last</span>
+
+        <!-- Right Side -->
+
+        <div class="requirements-box">
+            <h2>Requirements:</h2>
+            
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                    Must be a business Owner
+                </p>
+            </div>
+
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                    Fund From ₦50,000 to ₦300,000
+                </p>
+            </div>
+
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                    Weekly Repayment
+                </p>
+            </div>
+
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                    Duration 6 Months
+                </p>
+            </div>
+
+
         </div>
-      </div>
     </div>
-  </div>
+</section>
 
-  <div class="form-row">
-    <div class="field">
-      <label>Your Location/State<span class="required">*</span></label>
-      <div class="select-wrap">
-        <select name="location">
-          <option selected>Abuja(FCT)</option>
-          <option>Lagos</option>
-          <option>Kaduna</option>
-          <option>Kano</option>
-          <option>Rivers</option>
-          <option>Oyo</option>
-        </select>
-      </div>
-      <!---<div class="location-suggestion">Abuja(FCT)</div>--->
-    </div>
+<br><br>
 
-    <div class="field">
-      <label>Phone<span class="required">*</span></label>
-      <div class="phone-wrap">
-        <span class="flag-ng"><span></span><span></span><span></span></span>
-        <span class="phone-caret">▾</span>
-        <input type="tel" name="phone" placeholder="0802 123 4567">
-      </div>
-    </div>
-  </div>
 
-  <div class="form-row">
-    <div class="field">
-      <label>Email<span class="required">*</span></label>
-      <input type="email" name="email">
-    </div>
 
-    <div class="field">
-      <label>Do you have an account with N.E.A.T ?</label>
-      <div class="checkbox-group">
-        <div class="checkbox-item">
-          <input type="checkbox" id="has_account_yes" name="has_account" value="yes">
-          <label for="has_account_yes">Yes</label>
+<div class="main">
+        <!-- Left: Yellow Calculator -->
+        <div class="calculator">
+            <h1>Calculate the Amount<br>You Need?</h1>
+            
+            <!-- Amount -->
+            <div class="amount-section">
+                <div class="amount-labels">
+                    <span>₦50,000</span>
+                    <span>₦1,000,000</span>
+                </div>
+                <div class="amount-value" id="amountDisplay">₦500,000</div>
+                <input type="range" class="slider" id="amountSlider" 
+                       min="50000" max="1000000" value="500000" step="1000">
+            </div>
+            
+            <!-- Weeks -->
+            <div class="weeks-section">
+                <div class="weeks-labels">
+                    <span>1 weeks</span>
+                    <span>24 weeks</span>
+                </div>
+                <div class="weeks-value" id="weeksDisplay">10 weeks</div>
+                <input type="range" class="slider" id="weeksSlider" 
+                       min="1" max="24" value="10" step="1">
+            </div>
+            
+            <!-- Results -->
+            <div class="repayment">
+                Your repayments is <span class="repayment-amount" id="repayment">₦19,500</span> every weeks at <span id="rate">30%</span><br>
+                <span class="total-pay">Total you will Pay: <span id="total">₦650,000</span></span>
+            </div>
         </div>
-        <div class="checkbox-item">
-          <input type="checkbox" id="has_account_no" name="has_account" value="no">
-          <label for="has_account_no">No</label>
+        
+        <!-- Right Side -->
+        <div class="right">
+            <h2>Grow and expand your business with<br>N.E.A.T Asset Fund.</h2>
+            <button class="apply-btn" onclick="alert('Apply Now - Form would open here')">Apply Now</button>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="field">
-      <label>If Yes? Enter your N.E.A.T account number</label>
-      <input type="text" name="account_number">
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="field full-width">
-      <label>Amount you willing to invest (&#8358;)<span class="required">*</span></label>
-      <div class="amount-wrap">
-        <input type="number" name="amount">
-        <div class="spinner">
-          <button type="button" aria-label="Increase">
-            <svg viewBox="0 0 10 6" fill="currentColor"><polygon points="5,0 10,6 0,6"/></svg>
-          </button>
-          <button type="button" aria-label="Decrease">
-            <svg viewBox="0 0 10 6" fill="currentColor"><polygon points="0,0 10,0 5,6"/></svg>
-          </button>
-        </div>
-      </div>
-      <div class="helper-text">Minimum &#8358;500,000</div>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="field full-width">
-      <label>Comments / Remark</label>
-      <textarea name="comments"></textarea>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="field full-width">
-      <label>I declare to be more than 18 years old<span class="required">*</span></label>
-      <div class="checkbox-group">
-        <div class="checkbox-item">
-          <input type="checkbox" id="declare_yes" name="declare_age" value="yes">
-          <label for="declare_yes">Yes</label>
-        </div>
-      </div>
     </div>
 
-    <div class="form-row">
-    <div class="field full-width">
-      <label>I would like to sign up to the N.E.A.T newsletter and be informed on the latest news<span class="required">*</span></label>
-      <div class="checkbox-group">
-        <div class="checkbox-item">
-          <input type="checkbox" id="declare_yes" name="declare_age" value="yes">
-          <label for="declare_yes">Yes</label>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="submit">
-    <a href=""><button>Submit Application</button></a>
-  </div>
-</form>
 
 
-
-
-
-
-
-
-<!-------------------Footer----------------------->
+<!-------------------Footer------------------------->
 
 <footer class="footer">
   <div class="footer-grid">
@@ -1901,19 +1810,11 @@ html{
 
 
 
-<!----- Whatsapp
-<a href="https://wa.me/2347061421985" class="whatsapp-chat" target="_blank">
-    <div class="chat-label">
-        Need Help? Chat With Us
-    </div>
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
-</a>-->
+
 
 
 <script>
-
-    
 
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
@@ -2080,33 +1981,98 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 
 
 
+/*=======================Mobile Fix=================*/
+(function(){
+  var nav = document.querySelector('.nav-links');
+  if(!nav) return;
 
-/*============================================================*/
-const acc = document.querySelectorAll(".accordion");
-    acc.forEach(button=>{
-    button.addEventListener("click",()=>{
-const panel=button.nextElementSibling;
-const open=document.querySelector(".accordion.active");
-    if(open && open!==button){
-    open.classList.remove("active");
-    open.querySelector(".arrow").innerHTML="&#9660;";
-    open.nextElementSibling.style.maxHeight=null;
-    }
-    button.classList.toggle("active");
-    if(panel.style.maxHeight){
-    panel.style.maxHeight=null;
-    button.querySelector(".arrow").innerHTML="&#9660;";
-    }else{
-    panel.style.maxHeight=panel.scrollHeight+"px";
-    button.querySelector(".arrow").innerHTML="&#9650;";
-    }
+  var toggle = document.querySelector('.nav-toggle');
+  if(!toggle){
+    toggle = document.createElement('button');
+    toggle.className='nav-toggle'; toggle.setAttribute('aria-label','Menu');
+    toggle.innerHTML='<span></span><span></span><span></span>';
+    toggle.style.cssText='flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;';
+    toggle.querySelectorAll('span').forEach(function(s){
+      s.style.cssText='display:block;width:24px;height:2.5px;background:#2f16b3;border-radius:2px;'; });
+    nav.parentNode.appendChild(toggle);
+  }
+  var closeBtn = nav.querySelector('.nav-close');
+  if(!closeBtn){ closeBtn=document.createElement('button'); closeBtn.className='nav-close';
+    closeBtn.setAttribute('aria-label','Close menu'); closeBtn.innerHTML='&times;'; nav.appendChild(closeBtn); }
+  var backdrop = document.querySelector('.nav-backdrop');
+  if(!backdrop){ backdrop=document.createElement('div'); backdrop.className='nav-backdrop'; document.body.appendChild(backdrop); }
+  var mc = document.querySelector('.menu-container');
+  if(mc && !mc.querySelector('.submenu-toggle')){
+    var sb=document.createElement('button'); sb.className='submenu-toggle';
+    sb.setAttribute('aria-label','Toggle products'); sb.innerHTML='&#9662;';
+    var btn=mc.querySelector('.menu-btn');
+    if(btn && btn.nextSibling) mc.insertBefore(sb, btn.nextSibling); else mc.appendChild(sb);
+  }
 
-    });
+  var search=document.querySelector('.site-search'), navbar=document.querySelector('.navbar');
+  function placeSearch(){
+    if(!search||!navbar) return;
+    if(window.innerWidth<=900){ if(search.parentNode!==navbar) navbar.insertBefore(search, navbar.firstChild); search.style.order='0'; }
+    else { if(search.parentNode===navbar) nav.insertBefore(search, nav.querySelector('.nav-close')); search.style.order=''; }
+  }
+  placeSearch(); window.addEventListener('resize', placeSearch);
 
-    });
+  function open(){ nav.classList.add('open'); backdrop.classList.add('show'); document.body.classList.add('menu-open'); }
+  function close(){ nav.classList.remove('open'); backdrop.classList.remove('show'); document.body.classList.remove('menu-open');
+    document.querySelectorAll('.menu-container.open').forEach(function(c){ c.classList.remove('open'); }); }
 
-    document.querySelector(".panel.show").style.maxHeight=
-    document.querySelector(".panel.show").scrollHeight+"px";
+  toggle.addEventListener('click', function(e){ e.preventDefault(); nav.classList.contains('open')?close():open(); });
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  document.querySelectorAll('.submenu-toggle, .nav-links .menu-btn').forEach(function(el){
+    el.addEventListener('click', function(e){ if(window.innerWidth>900) return;
+      e.preventDefault(); e.stopPropagation(); this.closest('.menu-container').classList.toggle('open'); });
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  window.addEventListener('resize', function(){ if(window.innerWidth>900) close(); });
+})();
+
+<!-- ============ END MOBILE RESPONSIVE PACK ============ -->
+
+
+
+
+
+
+
+
+
+/*========================Calculator==================================================*/
+const amountSlider = document.getElementById('amountSlider');
+        const weeksSlider = document.getElementById('weeksSlider');
+        const amountDisplay = document.getElementById('amountDisplay');
+        const weeksDisplay = document.getElementById('weeksDisplay');
+        const repaymentEl = document.getElementById('repayment');
+        const totalEl = document.getElementById('total');
+        
+        function updateValues() {
+            const principal = parseFloat(amountSlider.value);
+            const weeks = parseInt(weeksSlider.value);
+            
+            // Amount display
+            amountDisplay.textContent = '₦' + principal.toLocaleString('en-US');
+            
+            // Weeks display
+            weeksDisplay.textContent = weeks + ' weeks';
+            
+            // Calculation: Flat 30% interest
+            const total = Math.round(principal * 1.3);
+            const weeklyPayment = Math.round(total / weeks);
+            
+            repaymentEl.textContent = '₦' + weeklyPayment.toLocaleString('en-US');
+            totalEl.textContent = '₦' + total.toLocaleString('en-US');
+        }
+        
+        amountSlider.addEventListener('input', updateValues);
+        weeksSlider.addEventListener('input', updateValues);
+        
+        // Initialize
+        updateValues();
 
 </script>
 </body>

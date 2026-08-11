@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
+
 
 *{
     margin:0;
@@ -398,127 +400,444 @@ body{
 
 
 
-.contact-form-section{
-    background:#f7f7f7;
-    padding:70px 20px;
-}
 
-.contact-form{
-    max-width: 700px;
-    margin:auto;
-    background:#fff;
-    padding:45px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+/* =========================
+   FUND CALCULATOR
+========================= */
 
-
-}
-
-.form-header{
+.fund-section{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    margin-bottom:35px;
+    align-items:flex-start;
+    gap:40px;
+    padding:40px 4%;
+    background:#f3f3f3;
+    padding: 10px;
 }
 
-.form-header h2{
-    font-size:20px;
-    color:#1f2437;
+/* LEFT SIDE */
+
+.fund-left{
+    width:50%;
+    padding-top: 30px;
+    padding-left: 60px;
+}
+
+.fund-left h1{
+    font-size:30px;
     font-weight:700;
+    color:#220468;
+    line-height:1.1;
+    margin-bottom:28px;
 }
 
-.form-row{
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    margin-bottom:18px;
-}
-.form-row p{
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-    width:100%;
-    padding:18px 24px;
-    border:1px solid #e2e2e2;
-    outline:none;
-    font-size:14px;
-    color:#333;
-    border-radius:3px;
-    transition:.3s;
-}
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus{
-
-    border-color:#1f4d6b;
-}
-
-.contact-form select{
-    margin-bottom:18px;
-    background:white;
-}
-
-.contact-form textarea{
-    height:170px;
-    resize:none;
+.fund-left > p{
+    color:#8a8a99;
+    font-size:17px;
     margin-bottom:20px;
 }
 
-.checkbox-area{
+/* RIGHT SIDE */
+
+.fund-right{
+    width:35%;
+    padding-top: 30px;
+   font-size: 20px;
+    
+}
+
+.fund-right h2{
+    font-size:20px;
+    line-height:1.15;
+    color:#2f16b3;
+    margin-bottom:30px;
+    font-weight:70;
+
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .fund-section{
+        flex-direction:column;
+    }
+
+    .fund-left,
+    .fund-right{
+        width:100%;
+    }
+
+    .fund-right{
+        min-height:auto;
+    }
+
+}
+
+
+
+
+.line{
+    height: 4px;
+    background-color: #230083;
+    border: none;
+    width: 100vw;
+    margin-top: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   FUND CALCULATOR
+========================= */
+
+.picture-section{
     display:flex;
+    justify-content:space-between;
     align-items:flex-start;
-    gap:10px;
-    margin-bottom:25px;
+    gap:40px;
+    padding:40px 4%;
+    background:#f3f3f3;
+    
 }
 
-.checkbox-area input{
-    width:18px;
-    height:18px;
-    margin-top:3px;
+/* LEFT SIDE */
+
+.picture-left{
+    width:50%;
+    
+    
 }
 
-.checkbox-area label{
-    font-size:14px;
-    color:#666;
+.picture-left h1{
+    font-size:30px;
+    font-weight:700;
+    color:#220468;
+    line-height:1.1;
+    margin-bottom:28px;
+}
+
+
+.picture-left p{
+    color:#8a8a99;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* RIGHT SIDE */
+
+.picture-right{
+    width:45%;
+    padding-top:30px;
+    font-size:17px;
+    font-weight:400;
+    color:#8a8a99;
+    line-height:1.8;
+}
+
+.picture-right h2{
+    font-size:20px;
+    line-height:1.15;
+    color:#2f16b3;
+    margin-bottom:30px;
+    font-weight:70;
+}
+.story-text{
+    font-size:18px;
+    font-weight:600;
+    color:#2f16b3;
     line-height:1.6;
 }
-
-.checkbox-area a{
-    color:#666;
-    text-decoration:underline;
+.story-left{
+    font-size:17px;
+    font-weight:400;
+    color:#8a8a99;
+    line-height:1.8;
 }
 
-.contact-form button{
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .picture-section{
+        flex-direction:column;
+    }
+
+    .picture-left,
+    .picture-right{
+        width:100%;
+    }
+
+    .picture-right{
+        min-height:auto;
+    }
+
+}
+
+.philosophy{
+    text-align: center;
+    margin: 30px;
+    color: #4141d8;
+}
+.directors{
+    max-width:900px;
+    margin:70px auto 40px;
+    text-align:center;
+    padding:0 20px;
+}
+
+.directors h1{
+    color:#2f16b3;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.directors p{
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .directors h1{
+        font-size:32px;
+    }
+
+    .directors p{
+        font-size:16px;
+    }
+
+}
+
+
+
+/*==============Philosophy================*/
+.accordion-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+    padding:70px 6%;
+    background:#ececec;
+}
+
+.accordion-image{
+    width:45%;
+}
+
+.accordion-image img{
     width:100%;
-    background:#184f6b;
-    color:white;
+    border-radius:4px;
+}
+
+.accordion-container{
+    width:50%;
+}
+
+.accordion-item{
+    border-bottom:1px solid #cfcfcf;
+}
+
+.accordion{
+    width:100%;
+    background:none;
     border:none;
-    padding:18px;
-    font-size:20px;
-    font-weight:600;
-    border-radius:3px;
     cursor:pointer;
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:30px;
+    font-weight:600;
+}
+
+.accordion span:first-child{
+    font-size:18px;
+    color:#111;
+}
+
+.icon{
+    font-size:28px;
     transition:.3s;
 }
 
-.contact-form button:hover{
-    background:#143f56;
+.panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .5s ease;
 }
 
-@media(max-width:768px){
-.form-row{
-    grid-template-columns:1fr;
+.panel p{
+    padding:0 0 25px;
+    color:#666;
+    font-size:17px;
+    line-height:1.9;
 }
-.contact-form{
-    padding:30px;
+
+.accordion.active .icon{
+    transform:rotate(45deg);
 }
-.form-header h2{
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .accordion-section{
+        flex-direction:column;
+    }
+
+    .accordion-image,
+    .accordion-container{
+        width:100%;
+    }
+
+}
+
+/* =========================
+   FUND CALCULATOR
+========================= */
+
+.philosophy-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    padding:40px 4%;
+    background:#f3f3f3;
+    
+}
+
+/* LEFT SIDE */
+
+.philosophy-left{
+    width:50%;
+    
+    
+}
+
+.philosophy-left h1{
     font-size:30px;
+    font-weight:700;
+    color:#220468;
+    line-height:1.1;
+    margin-bottom:28px;
 }
 
+
+.philosophy-left > p{
+    color:#8a8a99;
+    font-size:17px;
+    margin-bottom:20px;
+}
+
+/* RIGHT SIDE */
+
+.philosophy-right{
+    width:45%;
+    padding-top: 30px;
+   font-size: 20px;
+    
+}
+
+.philosophy-right h2{
+    font-size:20px;
+    line-height:1.15;
+    color:#2f16b3;
+    margin-bottom:30px;
+    font-weight:70;
+}
+.story-text{
+    font-size:18px;
+    font-weight:600;
+    color:#2f16b3;
+    line-height:1.6;
+}
+
+.story-left{
+    font-size:17px;
+    font-weight:400;
+    color:#8a8a99;
+    line-height:1.8;
+}
+
+
+
+/* Story images only */
+.story-image{
+    display:inline-block;
+    animation: floatImage 2s ease-in-out infinite;
+}
+
+.story-image img{
+    width:100%;
+    max-width:550px;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    transition:all .35s ease;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+/* Press-in effect */
+.story-image img:hover{
+    transform:scale(0.96);
+    box-shadow:inset 0 10px 20px rgba(0,0,0,.25),
+               inset 0 -10px 20px rgba(255,255,255,.15),
+               0 4px 10px rgba(0,0,0,.15);
+}
+
+
+
+
+
+/* Floating animation */
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .picture-section{
+        flex-direction:column;
+    }
+
+    .picture-left,
+    .picture-right{
+        width:100%;
+    }
+
+    .picture-right{
+        min-height:auto;
+    }
+
 }
 
 
@@ -526,7 +845,115 @@ body{
 
 
 
-/*===============Footer====================*/
+
+
+
+
+
+/*====================Board==================*/
+
+.board-section{
+    width: 100%;
+    padding: 60px 8%;
+    background: #fff;
+}
+.board-container{
+
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 35px;
+    gap: 30px;
+}
+.board-card{
+    text-align: center;
+}
+.board-card img{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    margin: auto;
+}
+.board-card h3{
+    margin-top: 8px;
+    color: #0047b3;
+    font-size: 22px;
+    font-weight: 600;
+}
+.board-card p{
+    margin-top: 8px;
+    color: #888;
+    font-size: 18px;
+    
+}
+@media(max-width:992px){
+    .board-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:768px  ){
+    .board-container{
+        grid-template-columns: 1fr;
+    }
+    .board-card img{
+        height: 420px;
+    }
+}
+
+.pic-page{
+    height: 30px;
+    width: 160px;
+    border: none;
+    background: white;
+    color: rgb(13, 13, 15)3, 3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+/*=========================
+        OUR TEAM HEADER
+==========================*/
+.team-header{
+    max-width: 900px;
+    margin: 70px auto 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.team-header h1{
+    color: #2f16b3;      /* Blue heading */
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.team-header p{
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .team-header h1{
+        font-size: 32px;
+    }
+
+    .team-header p{
+        font-size: 16px;
+    }
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -753,8 +1180,7 @@ body{
 
 
 
-
-     
+  
 /* =========================================================
    GLOBAL RESPONSIVE LAYER
    Add-on rules only — nothing above this is modified.
@@ -901,7 +1327,64 @@ body {
         min-width: 160px;
         max-width: 80vw;
     }
-   
+
+    /* --- Hero --- */
+    .hero-title {
+        font-size: 26px;
+    }
+    .small-text {
+        font-size: 15px;
+    }
+    .apply-btn {
+        padding: 13px 26px;
+        font-size: 14px;
+    }
+    .arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* --- Yellow feature tabs --- */
+    .yellow-tab {
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        justify-content: center;
+    }
+    .yellow-tab li {
+        font-size: 13px;
+    }
+
+    /* --- Products grid --- */
+    .large-card, .small-card, .bottom-card {
+        height: 240px;
+    }
+    .product-content h3 {
+        font-size: 22px;
+    }
+    .products-header h2 {
+        font-size: 28px;
+    }
+
+    /* --- Fund calculator --- */
+    .fund-head {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+    .fund-right {
+        padding: 26px 18px;
+    }
+    .total-pay {
+        font-size: 19px;
+    }
+
+    /* --- Yellow promo collage --- */
+    .collage {
+        zoom: 0.55;
+    }
+
     /* --- Footer --- */
     .badge-box img {
         width: 80px;
@@ -920,6 +1403,18 @@ body {
    BREAKPOINT: <= 420px  (small phones)
 ========================================================= */
 @media (max-width: 420px) {
+    .hero-title {
+        font-size: 22px;
+    }
+    .side-text h1 {
+        font-size: 24px;
+    }
+    .fund-left h1 {
+        font-size: 28px;
+    }
+    .yellow-page-left h1 {
+        font-size: 26px;
+    }
     .collage {
         zoom: 0.42;
     }
@@ -934,6 +1429,25 @@ body {
     }
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  /*=================Media fix using AI==============================*/
@@ -1001,11 +1515,17 @@ html{
 @media (max-width:768px){
 
     .top-header{
-      display: none;
         flex-direction:column;
         align-items:center;
         text-align:center;
         padding:15px;
+    }
+
+    .top-left,
+    .top-right{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:10px;
     }
 
     .navbar{
@@ -1299,11 +1819,10 @@ html{
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
 
-
     </style>
 </head>
 <body>
-
+    
 <!-- =========================  TOP HEADER    ======================== -->
 
 <div class="top-header">
@@ -1378,7 +1897,7 @@ html{
 
     <div class="top-right">
 
-        <a href="microFund.html" class="top-btn">Get Funding</a>
+        <a href="products.html" class="top-btn">Get Funding</a>
         <a href="funding.html" class="top-btn">Open an Account</a>
         <a href="https://webmail.neatmicrocredit.com.ng/" class="top-btn">Email Login</a>
 
@@ -1401,7 +1920,7 @@ html{
   </div>
 
   <div class="logo-section">
-    <img src="logo.png" class="logo">
+    <img src="../images/logo.png" class="logo">
     <div class="logo-text">
       <h2>N.E.A.T MICROREDIT</h2>
       <p>...Changing the face of business in Africa</p>
@@ -1442,80 +1961,240 @@ html{
 
 
 
+   <!-- =========================
+     FUND CALCULATOR SECTION
+========================= -->
+
+<section class="fund-section">
+
+    <div class="fund-left">
+
+        <h1>
+            N.E.A.T Microcredit
+        </h1>
+
+    </div>
+
+    <!-- RIGHT CALCULATOR -->
+
+    <div class="fund-right">
+        <h2>
+           We Are Moving Africa Forward
+        </h2>
+    </div>
+
+</section>
+
+
+<hr class="line">
 
 
 
 
 
 
+   <!-- =========================
+     HERO  SECTION
+========================= -->
+
+<section class="picture-section">
+
+    <div class="picture-left">
+        <h1>
+            
+        </h1>
+    <div class="story-image">
+        <img src="../images/board.png" alt="">
+    </div>
+    </div>
+
+    <!-- RIGHT CALCULATOR -->
+
+    <div class="picture-right">
+        <button style="width: 100px; height: 25px; background-color: #c9cccc; border: none;">Our Story</button>
+       <br><br> <p class="story-text">It is born out of a series of personal childhood experiences of myself
+             which I hold dear and have planned all my life to remedy.</p>
+             <br><br>
+        <p class="story-left">All the steps I have taken from age 9 till today have been in preparation, 
+            planning and execution of this life purpose, which is to ensure that as many 
+            as possible do not go through what my mother went through. To ensure that hardworking 
+            people with integrity have access to funds and knowledge needed to take their businesses 
+            to the next level. The story of how my mother always had to sell her chickens for N40, when 
+            she could have gotten as much as N140 for the same chickens if she had access to credit at
+             that time stays in my memories.</p>
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HERO  SECTION
+========================= -->
+
+<section class="picture-section">
+
+    <div class="picture-left">
+        <h1>
+            
+        </h1>
+        <p>Lack of affordable credit is still plaguing the poor market women of today. 
+            Due to lack of capital to buy in bulk, there is an increase in their overheads 
+            to the point where they barely make any profit. Worse still, this lack of affordable 
+            credit puts them at the mercy of loan sharks, who exploit their desperation to no end.
+            Our goal is to ensure that every hardworking person in Africa has access to funds and
+            knowledge that can help them scale up their business. We understand that to get
+            the African economy right, we have to focus on our informal sector. We want to be
+            able to look at the next generation in the face and say we did all we could to make 
+            Africa better. Furthermore, we understand that the solution to the African problem 
+            cannot be found in charity and donations. Besides, we must build companies that can solve 
+            Africa’s problems at a profit.
+            <p>NEAT Microcredit has been in business since 2017, and we have been profitable since then.</p></p>
+    </div>
+
+    <!-- RIGHT CALCULATOR -->
+
+    <div class="picture-right">
+       
+         <div class="story-image">
+             <img src="../images/team.png" alt="">
+        </div>
+        
+    </div>
+
+</section>
 
 
 
 
+<!-- =========================
+     HERO  SECTION
+========================= -->
 
-    
-<section class="contact-form-section">
-    <div class="contact-form">
-        <div class="form-header">
-            <h2>Expression Of Interest</h2>
+<section class="picture-section"> 
+
+    <div class="picture-left">
+        <h1>
+            
+        </h1>
+        <div class="story-image">
+             <img src="../images/table.png" alt="">
         </div>
 
-        <form>
-
-            <div class="form-row">
-                <p>First Name</p>
-                <input type="text" placeholder="First name">
-            </div>
-
-            <div class="form-row">
-                <p>Middle Name (Optional)</p>
-                <input type="text" placeholder="Middle name">
-            </div>
-
-            <div class="form-row">
-                <p>Last Name</p>
-                <input type="text" placeholder="Last name">
-            </div>
-
-            <div class="form-row">
-                <p>Phone Number</p>
-                <input type="text" placeholder="Phone number">
-            </div>
-
-            <div class="form-row">
-                <p>Email Address (Optiomal)</p>
-                <input type="email" placeholder="Your email address">
-            </div>
-
-               <div class="form-row">
-                 <p>Select a Branch</p>
-               </div>
-
-            <select>
-                <option selected>Select a Branch</option>
-                <option>Kaduna 1</option>
-                <option>kaduna 2</option>
-                <option>GoninGora (Kaduna)</option>
-                <option>Zaria Office (Kaduna)</option>
-                <option>Kawo (Kaduna)</option>
-                <option >Karu Office (Abuja)</option>
-                <option >Gwagwalada(Abuja)</option>
-                <option >Suleja (Abuja)</option>
-                <option>Ilorin Office 1 (Kwara State)</option>
-                <option >Ilorin Office 2 (Kwara State)</option>
-                <option >Offa (Kwara State)</option>
-                <option >Omu-Aran (Kwara State)</option>
-                <option >Hadeja RD Kano State (1)</option>
-                <option >Sabon Gari Kano State (2)</option>
-                <option >Zoo RD \ Kano State (3)</option>
-                <option >Kabuga Kano State (4)</option>
-            </select>
-
-            <button type="submit">
-                Proceed
-            </button>
-        </form>
     </div>
+
+    <!-- RIGHT CALCULATOR -->
+
+    <div class="picture-right">
+        <p >This has been achieved by watching our cost closely 
+            and keeping our overhead very low without jeopardizing quality customer 
+            experience and staff welfare. Based on the experience of our investors over 
+            the years, we have given nothing less than 24% per annum on their funds with us. 
+            That makes it certain that our funders double their funds through profit sharing within 3 years.
+            Our members/investors can receive returns on their investment on a monthly,
+            quarterly, biannually or annual basis. Fortunately, we are different because of our 
+            intention. While most microfinances were formed to make money, we were formed to improve the
+             economy of Africa. However, we understand that we need to be profitable to do that sustainably. 
+             So instead of focusing on how to increase our rates to make more money, we focus on how to reduce 
+             our overheads and do more business to stay profitable. To do this, we combine the non-interest 
+             banking of Islam with the Medici small independent banking principle of ancient Rome.</p>
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================
+     HERO  SECTION
+========================= -->
+
+<section class="picture-section">
+
+    <div class="picture-left">
+        <h1>
+            
+        </h1>
+        <p>With the two combined principles, we ensure that our funds truly improve the 
+            lives of our clients without putting the burden on them, and we also keep our 
+            costs down by keeping it small and simple. Another very important uniqueness 
+            is our training, we give our clients the basic knowledge required to keep and 
+            improve their businesses. Another thing we do is evaluation and peer review. We 
+            evaluate the economy of our clients periodically to see if there is any improvement, 
+            we also compare them with their peers to foster healthy competition. We look forward to 
+            collaborating with you as we go on this exciting journey of wealth creation and positioning 
+            of our continent as one of economic growth and development. Join us so that we can be able to 
+            say sincerely to the next generation that we did the best we could to help create wealth in Africa 
+            and reduce extreme poverty. The good news is, our best is good enough. Thank You!
+        </p>
+    </div>
+
+    <!-- RIGHT CALCULATOR -->
+
+    <div class="picture-right">
+       
+            <div class="story-image">
+             <img src="../images/out.png" alt="">
+        </div>
+        
+    </div>
+
+</section>
+
+<hr class="line">
+
+
+
+
+
+<h1 class="philosophy">--N.E.A.T Philosophy</h1>
+
+<!-- =========================
+     HERO  SECTION
+========================= -->
+
+<section class="accordion-section">
+
+    <div class="accordion-image">
+        <img src="../images/growth.png" alt="Growth">
+    </div>
+
+    <div class="accordion-container">
+
+        <!-- Profitability -->
+        <div class="accordion-item">
+
+            <button class="accordion">
+                <span>01. Profitability</span>
+                <span class="icon">+</span>
+            </button>
+
+            <div class="panel">
+                <p>
+                    We understand that the solution to the African problem cannot be found in charity and donations. We must build companies that can solve Africa’s problems at a profit. NEAT Microcredit has been in business since 2017, and we have been profitable since then. This has been achieved by watching our cost closely and keeping our overhead very low without jeopardizing quality customer experience and staff welfare. Based on the experience of our investors over the years, we have given nothing less than 30% per annum on the funds invested with us. That makes it certain that our investors will make back their investment through profit sharing within 3 years. Our members/investors can receive returns on their investment on a monthly, quarterly, biannually or annual basis.
+                </p>
+             </div>
+
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="accordion-item">
+
+            <button class="accordion">
+                <span>02. Growth Plan</span>
+                <span class="icon">+</span>
+            </button>
+
+            <div class="panel">
+                <p>
+                    N.E.A.T Microcredit is poised to become the leading financial and investment institution in Africa. Our goal is to support the industrialization of our continent. We are starting at a microcredit level because we understand that we must pull more of our population out of extreme poverty and create strong middle-class families, as that will be required to support our industrialization plan. Therefore, 50% of all our profit are reinvested into the business to ensure accelerated growth and make funds available for more investment.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 
@@ -1525,7 +2204,117 @@ html{
 
 
 
-<!---------------------Footer---------------------------------->
+
+
+<div class="directors">
+    <h1>Board Of Directors</h1>
+    <p>
+        The Board of Directors at NEAT Microcredit is a diverse group of 
+        esteemed professionals dedicated to fostering sustainable economic 
+        development through innovative microfinance solutions. With their collective expertise, 
+        they ensure that the organization remains aligned with its mission to empower underserved communities
+    </p>
+</div>
+
+<section class="board-section">
+    <div class="board-container">
+            <div class="board-card">
+                <img src="../images/chairman.png" alt="">
+                <h3>Dave Delucia</h3>
+                <p>Board Chairman</p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/member.png" alt="">
+                <h3>Dr. Oluseun Falope</h3>
+                <p>Board Member</p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/member2.png" alt="">
+                <h3>Haj. Hadiza Musa</h3>
+                <p>Board Member</p>
+            </div>
+    </div>
+</section>
+
+
+<section class="board-section">
+    <div class="board-container">
+            <div class="board-card">
+                <img src="../images/chairman.png" alt="">
+                <h3>Dave Delucia</h3>
+                <p>Board Chairman</p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/ceo.png" alt="">
+                <h3>Omoniyi Rafiu Salami</h3>
+                <p>Chief Executive Officer</p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/coo.png" alt="">
+                <h3>Olubunmi Maryam Salami</h3>
+                <p>Chief Operating Officer</p>
+            </div>
+    </div>
+</section>
+
+
+<br><br><br><br><br><br><br><br>
+
+<div class="team-header">
+    <h1>Our Team</h1>
+    <p>At NEAT Microcredit, our management team is dedicated to driving our mission forward 
+        with expertise and passion. We work collaboratively to empower communities and enhance 
+        financial accessibility across Africa.
+    </p>
+</div>
+
+
+
+<section class="board-section">
+    <div class="board-container">
+            <div class="board-card">
+                <img src="../images/ceo.png" alt="">
+                <h3>Omoniyi Rafiu Salami</h3>
+                <button class="pic-page">Chief Executive Officer</button>
+                <p>He is dedicated to empowering underserved communities through microfinance. 
+                    With extensive experience in finance and a strong commitment to financial inclusion, 
+                    he has significantly enhanced the organization’s reach and impact. His leadership fosters 
+                    economic growth and drives partnerships for sustainable development.
+                </p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/coo.png" alt="">
+                <h3>Olubunmi Maryam Salami</h3>
+                <button class="pic-page">Chief Operating Officer</button>
+                <p>Her crucial role in overseeing daily operations and ensuring the efficient delivery of 
+                    microfinance services. With a strong background in operations management and finance, 
+                    Olubunmi works closely with the team to create impactful financial solutions for underserved populations.
+                </p>
+            </div>
+
+            <div class="board-card">
+                <img src="../images/gbenga.png" alt="">
+                <h3>Ayodeji Gbenga</h3>
+                <button class="pic-page">Head Of IT</button>
+                <p>He spearheads the development and implementation of technological solutions to enhance 
+                    financial services. His innovative approach focuses on improving user experience and streamlining 
+                    transactions, ensuring that clients have seamless access to microfinance services.
+                </p>
+            </div>
+    </div>
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 
 <footer class="footer">
   <div class="footer-grid">
@@ -1655,12 +2444,7 @@ html{
 
 
 
-
-
-
-
 <script>
-        
 
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
@@ -1828,24 +2612,21 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 
 
 
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(btn=>{
+    btn.addEventListener("click",function(){
+        this.classList.toggle("active");
+        const panel=this.nextElementSibling;
 
-
-(function(){
-  var nav = document.querySelector('.nav-links');
-  var body = document.body;
-  function open(){ nav && nav.classList.add('open'); body.classList.add('menu-open'); }
-  function close(){ nav && nav.classList.remove('open'); body.classList.remove('menu-open');
-    document.querySelectorAll('.menu-container.open').forEach(function(m){ m.classList.remove('open'); }); }
-  document.getElementById('navToggle')?.addEventListener('click', function(e){ e.preventDefault(); open(); });
-  document.getElementById('navClose')?.addEventListener('click', function(e){ e.preventDefault(); close(); });
-  document.querySelector('.nav-backdrop')?.addEventListener('click', close);
-  document.querySelector('.submenu-toggle')?.addEventListener('click', function(e){
-    e.preventDefault(); e.stopPropagation();
-    this.closest('.menu-container')?.classList.toggle('open'); });
-  nav?.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
-  window.addEventListener('resize', function(){ if(innerWidth > 900) close(); });
-})();
+        if(panel.style.maxHeight){
+            panel.style.maxHeight=null;
+        }else{
+            panel.style.maxHeight=panel.scrollHeight+"px";
+        }
+    });
+});
 
 </script>
+
 </body>
 </html>

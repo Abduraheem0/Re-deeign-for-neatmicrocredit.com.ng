@@ -387,283 +387,138 @@ body{
 
 
 
-/* =========================
-   FUND CALCULATOR
-========================= */
 
-.fund-section{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:40px;
-    padding:40px 4%;
-    background:#f3f3f3;
-    padding: 10px;
+
+
+
+
+
+
+
+
+
+
+.contact-form-section{
+    background:#f7f7f7;
+    padding:70px 20px;
 }
 
-/* LEFT SIDE */
-
-.fund-left{
-    width:50%;
-    padding-top: 30px;
-    padding-left: 60px;
-}
-
-.fund-left h1{
-    font-size:30px;
-    font-weight:700;
-    color:#220468;
-    line-height:1.1;
-    margin-bottom:28px;
-}
-
-
-.fund-left > p{
-    color:#8a8a99;
-    font-size:17px;
-    margin-bottom:20px;
-}
-
-/* RIGHT SIDE */
-
-.fund-right{
-    width:35%;
-    padding-top: 30px;
-   font-size: 20px;
-    
-}
-
-.fund-right h2{
-    font-size:20px;
-    line-height:1.15;
-    color:#2f16b3;
-    margin-bottom:30px;
-    font-weight:70;
-
-}
-
-/* MOBILE */
-
-@media(max-width:1000px){
-
-    .fund-section{
-        flex-direction:column;
-    }
-
-    .fund-left,
-    .fund-right{
-        width:100%;
-    }
-
-    .fund-right{
-        min-height:auto;
-    }
-
-}
-
-.line{
-    height: 4px;
-    background-color: #230083;
-    border: none;
-    width: 100vw;
-    margin-top: 1px;
-}
-
-
-
-
-
-
-
-
-
-
-/*=========================
-      SAVINGS HERO
-==========================*/
-
-.savings-hero{
-    position: relative;
-    background: url("saving.png") center/cover no-repeat;
-    height: 430px;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 48px;
-}
-
-/* Left */
-
-.hero-left{
-    width:46%;
-    color:#fff;
-}
-
-.hero-left h1{
-    font-size:50zpx;
-    font-weight:700;
-    line-height:1.2;
-    margin-bottom:25px;
-}
-
-.hero-left p{
-    font-size:15px;
-    line-height:1.8;
-}
-
-/* Right */
-
-.requirements-box{
-    width:48%;
+.contact-form{
+    max-width: 700px;
+    margin:auto;
     background:#fff;
-    border-radius:18px;
-    padding:25px 30px;
+    padding:45px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+
 }
 
-.requirements-box h2{
-    color:#2f16b3;
+.form-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.form-header h2{
     font-size:20px;
+    color:#1f2437;
+    font-weight:700;
+}
+
+.form-row{
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-bottom:18px;
+}
+.form-row p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:18px 24px;
+    border:1px solid #e2e2e2;
+    outline:none;
+    font-size:14px;
+    color:#333;
+    border-radius:3px;
+    transition:.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+
+    border-color:#1f4d6b;
+}
+
+.contact-form select{
+    margin-bottom:18px;
+    background:white;
+}
+
+.contact-form textarea{
+    height:170px;
+    resize:none;
     margin-bottom:20px;
 }
 
-.requirement{
+.checkbox-area{
     display:flex;
-    align-items:center;
-    gap:18px;
+    align-items:flex-start;
+    gap:10px;
     margin-bottom:25px;
 }
 
-.tick{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#2f16b3;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.checkbox-area input{
+    width:18px;
+    height:18px;
+    margin-top:3px;
+}
+
+.checkbox-area label{
+    font-size:14px;
+    color:#666;
+    line-height:1.6;
+}
+
+.checkbox-area a{
+    color:#666;
+    text-decoration:underline;
+}
+
+.contact-form button{
+    width:100%;
+    background:#184f6b;
+    color:white;
+    border:none;
+    padding:18px;
     font-size:20px;
-    font-weight:bold;
-    flex-shrink:0;
-}
-
-.requirement p{
-    color:#2f16b3;
-    font-size:18px;
-    font-weight:700;
-    line-height:1.5;
-}
-
-
-
-
-
-
-
-
-
-.saving-products{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    padding:70px 5%;
-    gap:10px;
-}
-
-.saving-image{
-    width:80%;
-}
-.saving-image h1{
-    color:#2f16b3;
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.saving-image img{
-    width:100%;
-    border-radius:4px;
-}
-
-.saving-content{
-    width:60%;
-    
-}
-
-.saving-content h1{
-    color:#2f16b3;
-    font-size:40px;
-    margin-bottom:20px;
-
-}
-
-.intro{
-
-    color:#777;
-    font-size:15px;
-    line-height:1.8;
-    margin-bottom:35px;
-
-}
-
-.accordion{
-    width:100%;
-    background:white;
-    border: none;
-    border-radius:40px;
-    padding:20px 28px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    font-weight:600;
+    border-radius:3px;
     cursor:pointer;
-    font-size:18px;
-    font-weight:700;
-    color:#2f16b3;
     transition:.3s;
 }
-.accordion:hover{
-    border:solid;
-    color: #111 ;
-}
-.arrow{
 
-    font-size:22px;
-    transition:.3s;
-
+.contact-form button:hover{
+    background:#143f56;
 }
 
-.panel{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .4s ease;
-    padding:0 28px;
-
+@media(max-width:768px){
+.form-row{
+    grid-template-columns:1fr;
+}
+.contact-form{
+    padding:30px;
+}
+.form-header h2{
+    font-size:30px;
 }
 
-.panel p{
-    padding:20px 0;
-    color:#555;
-    line-height:1.8;
-    font-size:18px;
-
-}
-
-.show{
-    max-height:200px;
 }
 
 
@@ -671,310 +526,7 @@ body{
 
 
 
-
-
-.Opportunities{
-    color:#2f16b3;
-    font-size:20px;
-    margin-bottom:20px;
-    margin-left: 70px;
-    
-}
-.Opportunities p{
-    color:#777;
-    font-size:15px;
-    line-height:1.8;
-    margin-bottom:35px;    
-}
-.career{
-    align-items: center;
-    margin-left: 250px;
-    margin-right: 250px;
-}
-
-
-
-
-
-
-
-
-
-
-/*========== Form ==============*/
-
-  .form {
-    max-width: 100%;
-    padding-left: 70px;
-    padding-top: 30PX;
-    margin-right: 30px;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 240px;
-    margin-bottom: 28px;
-  }
-
-  .field {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .field label {
-    font-size: 16px;
-    font-weight: 700;
-    color: #55617a;
-    margin-bottom: 8px;
-  }
-
-  .required {
-    color: #e02424;
-    margin-left: 2px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px;
-    font-family: inherit;
-    color: #333;
-    border: 1px solid #c9c9c9;
-    border-radius: 3px;
-    padding: 9px 12px;
-    background: #ffffff;
-    width: 100%;
-    margin-right: 30px;
-  }
-
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #7aa7e0;
-    box-shadow: 0 0 0 3px rgba(122,167,224,0.25);
-  }
-
-  /* ---- Name row ---- */
-  .name-fields {
-    display: flex;
-    gap: 20px;
-  }
-  .name-fields .sub-field {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-  }
-  .name-fields .sub-field span {
-    font-size: 14px;
-    color: #3f6fd1;
-    margin-top: 6px;
-  }
-
-  /* ---- Location dropdown + suggestion ---- */
-  .select-wrap {
-    position: relative;
-  }
-  .select-wrap select {
-    appearance: none;
-    -webkit-appearance: none;
-    color: #9a9a9a;
-    cursor: pointer;
-  }
-  .select-wrap::after {
-    content: "";
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 7px solid #666;
-    transform: translateY(-40%);
-    pointer-events: none;
-  }
-  .location-suggestion {
-    font-size: 16px;
-    font-weight: 700;
-    color: #222;
-    margin-top: 10px;
-  }
-
-  /* ---- Phone field ---- */
-  .phone-wrap {
-    display: flex;
-    align-items: center;
-    border: 1px solid #c9c9c9;
-    border-radius: 3px;
-    padding: 0 12px;
-    background: #ffffff;
-  }
-  .phone-wrap:focus-within {
-    border-color: #7aa7e0;
-    box-shadow: 0 0 0 3px rgba(122,167,224,0.25);
-  }
-  .flag-ng {
-    display: flex;
-    width: 24px;
-    height: 16px;
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-  .flag-ng span {
-    flex: 1;
-    height: 100%;
-  }
-  .flag-ng span:nth-child(1) { background: #008751; }
-  .flag-ng span:nth-child(2) { background: #ffffff; }
-  .flag-ng span:nth-child(3) { background: #008751; }
-  .phone-wrap::before {
-    content: "";
-  }
-  .phone-caret {
-    color: #888;
-    font-size: 10px;
-    margin-right: 10px;
-  }
-  .phone-wrap input {
-    border: none;
-    padding: 9px 0;
-    flex: 1;
-  }
-  .phone-wrap input:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  
-  /* ---- Amount field with spinner ---- */
-  .full-width {
-    grid-column: 1 / span 2;
-    max-width: 100%;
-    margin-right: 30px;
-  }
-  .amount-wrap {
-    position: relative;
-    display: flex;
-  }
-  .amount-wrap input {
-    padding-right: 34px;
-  }
-  .amount-wrap input::-webkit-outer-spin-button,
-  .amount-wrap input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  .spinner {
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #c9c9c9;
-  }
-  .spinner button {
-    flex: 1;
-    border: none;
-    background: #f7f7f7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0;
-    color: #777;
-  }
-  .spinner button:first-child { border-bottom: 1px solid #c9c9c9; }
-  .spinner button svg { width: 9px; height: 9px; }
-
-  .helper-text {
-    font-size: 14px;
-    color: #55617a;
-    margin-top: 8px;
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-    width: 1380px;
-  }
-
-  @media (max-width: 720px) {
-    .form-row { grid-template-columns: 1fr; }
-    .full-width { grid-column: 1; max-width: 100%; }
-  }
-
-  .submit button{
-    
-    height: 50px;
-    width: 150px;
-    margin-top: -200px;
-    margin-bottom: 30px;
-    border: none;
-    color: #01060e;
-    background: #c7c6c6;
-  }
-
-.cv-upload{
-    width: 100%;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-}
-
-#dropArea{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    border: 2px solid #007BFF;
-    border-radius: 10px;
-    background:  white;
-    cursor: pointer;
-    transition: .3s;
-    text-align: center;
-    padding: 20px;
-}
-
-#dropArea:hover{
-    background: grey;
-}
-
-#dropArea.active{
-    background: #dcecff;
-    border-color: #0056b3;
-}
-
-.upload-icon{
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-#dropArea span{
-    color: #007BFF;
-    font-weight: bold;
-}
-
-#fileName{
-    margin-top: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-}
-
-
-
-
-
-
-/* =========================
-   FOOTER
-========================= */
+/*===============Footer====================*/
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -1192,14 +744,6 @@ body{
     color: #1a1a1a;
     font-size: 12px;
   }
-
-
-
-
-
-
-
-
 
 
 
@@ -1755,10 +1299,10 @@ html{
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
 
+
     </style>
 </head>
 <body>
-    
 
 <!-- =========================  TOP HEADER    ======================== -->
 
@@ -1857,7 +1401,7 @@ html{
   </div>
 
   <div class="logo-section">
-    <img src="logo.png" class="logo">
+    <img src="../images/logo.png" class="logo">
     <div class="logo-text">
       <h2>N.E.A.T MICROREDIT</h2>
       <p>...Changing the face of business in Africa</p>
@@ -1895,30 +1439,6 @@ html{
 
 
 
-  <!-- =========================
-     FUND CALCULATOR SECTION
-========================= -->
-
-<section class="fund-section">
-    <div class="fund-left">
-        <h1>Career</h1>
-    </div>
-
-    <!-- RIGHT CALCULATOR -->
-    <div class="fund-right">
-        <h2>
-           We Are Moving Africa Forward
-        </h2>
-    </div>
-</section>
-<br><br><br><br>
-
-
-<section class="career">
-    <div class="career"></div>
-        <img src="career.png" alt="">
-    </div>
-</section>
 
 
 
@@ -1930,165 +1450,82 @@ html{
 
 
 
-<section class="saving-products">
-
-    <!-- Left -->
-    <div class="saving-image">
-        <div class="saving-image">
-
-            <h1>Equal Opportunities</h1>
-
-        <p class="intro">
-           N.E.A.T Microcredit is fully committed to the principles of equal opportunities 
-           in recruitment and employment and does not discriminate on the basis of any legally 
-           protected status or characteristic.
-        </p>
-        <p class="intro">
-          If you’re ambitious, innovative and hardworking, a career with N.E.A.T Microcredit 
-          may be for you. New challenges are arising regularly as the microcredit terrain continues 
-          to develop in Nigeria. And new ideas, techniques, and solutions are needed. As the pursuit 
-          of value takes on greater significance in the financial sector, we have a multitude of 
-          career opportunities that will enable you to prove your abilities from the very first day 
-          of work.
-        </p>
-        
 
 
-        </div>
-    </div>
-
-    <!-- Right -->
-    <div class="saving-content">
-
-        <br><br>
-        <p class="intro">
-           If you’re ambitious, innovative and hardworking, a career with N.E.A.T Microcredit 
-           may be for you. New challenges are arising regularly as the microcredit terrain continues 
-           to develop in Nigeria. And new ideas, techniques, and solutions are needed. As the pursuit 
-           of value takes on greater significance in the financial sector, we have a multitude of 
-           career opportunities that will enable you to prove your abilities from the very first day 
-           of work.
-        </p>
 
     
-
-            </div>
+<section class="contact-form-section">
+    <div class="contact-form">
+        <div class="form-header">
+            <h2>Expression Of Interest</h2>
         </div>
+
+        <form>
+
+            <div class="form-row">
+                <p>First Name</p>
+                <input type="text" placeholder="First name">
+            </div>
+
+            <div class="form-row">
+                <p>Middle Name (Optional)</p>
+                <input type="text" placeholder="Middle name">
+            </div>
+
+            <div class="form-row">
+                <p>Last Name</p>
+                <input type="text" placeholder="Last name">
+            </div>
+
+            <div class="form-row">
+                <p>Phone Number</p>
+                <input type="text" placeholder="Phone number">
+            </div>
+
+            <div class="form-row">
+                <p>Email Address (Optiomal)</p>
+                <input type="email" placeholder="Your email address">
+            </div>
+
+               <div class="form-row">
+                 <p>Select a Branch</p>
+               </div>
+
+            <select>
+                <option selected>Select a Branch</option>
+                <option>Kaduna 1</option>
+                <option>kaduna 2</option>
+                <option>GoninGora (Kaduna)</option>
+                <option>Zaria Office (Kaduna)</option>
+                <option>Kawo (Kaduna)</option>
+                <option >Karu Office (Abuja)</option>
+                <option >Gwagwalada(Abuja)</option>
+                <option >Suleja (Abuja)</option>
+                <option>Ilorin Office 1 (Kwara State)</option>
+                <option >Ilorin Office 2 (Kwara State)</option>
+                <option >Offa (Kwara State)</option>
+                <option >Omu-Aran (Kwara State)</option>
+                <option >Hadeja RD Kano State (1)</option>
+                <option >Sabon Gari Kano State (2)</option>
+                <option >Zoo RD \ Kano State (3)</option>
+                <option >Kabuga Kano State (4)</option>
+            </select>
+
+            <button type="submit">
+                Proceed
+            </button>
+        </form>
     </div>
 </section>
 
 
- <div class="Opportunities">
-     <h1> Current Vacancies</h1><br>
-     <p>
-        The organization is seeking to fill up some positions, kindly fill the form below. 
-        You will be contacted as soon as possible if you meet up to the requirement.
-     </p>
- </div>
-
-
-
-
-<form class="form">
-
-  <div class="form-row">
-    <div class="field">
-      <label>Name<span class="required">*</span></label>
-      <div class="name-fields">
-        <div class="sub-field">
-          <input type="text" name="first_name">
-          <span>First</span>
-        </div>
-        <div class="sub-field">
-          <input type="text" name="last_name">
-          <span>Last</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-  <div class="field">
-      <label>Phone<span class="required">*</span></label>
-      <div class="phone-wrap">
-        <span class="flag-ng"><span></span><span></span><span></span></span>
-        <span class="phone-caret">▾</span>
-        <input type="tel" name="phone" placeholder="0802 123 4567">
-      </div>
-    </div>
-
-<br><br>
-
-
-
-  </div>
-
-  <div class="form-row">
-    <div class="field">
-      <label>Email<span class="required">*</span></label>
-      <input type="email" name="email">
-    </div>
-
-    <div class="field">
-       
-    <div class="field">
-      <label>Location<span class="required">*</span></label>
-      <input type="text" name="location">
-    </div>
-    </div>
-  </div>
-
-  <div class="field">
-      <label>Apply For Position<span class="required">*</span></label>
-      <div class="phone-wrap">
-        <input type="text" name="position" >
-      </div>
-    </div>
-    <br><br>
-
-  
-
-<div class="cv-upload">
-
-    <div class="form-row">
-    <div class="field full-width">
-      <label>Upload CV</label>
-    <input type="file" id="cvFile" accept=".pdf,.doc,.docx" hidden>
-
-    <label for="cvFile" id="dropArea">
-        <div class="upload-icon">📄</div>
-        <small>Accepted formats: PDF, DOC, DOCX</small>
-    </label>
-
-    <p id="fileName"></p>
-</div>
-
-
-<div class="form-row">
-    <div class="field full-width">
-      <label>Comments</label>
-      <textarea name="comments"></textarea>
-    </div>
-  </div>
-
-
-  </div>
-</div>
-<div class="submit">
-    <a href=""><button>Submit Application</button></a>
-  </div>
-</form>
 
 
 
 
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!---------------------Footer---------------------------------->
 
 <footer class="footer">
   <div class="footer-grid">
@@ -2212,24 +1649,19 @@ html{
   </div>
 
 
-\
- =========================
-     WHATSAPP CHAT
-=========================
-<!-----
-<a href="https://wa.me/2347061421985" class="whatsapp-chat" target="_blank">
-    <div class="chat-label">
-        Need Help? Chat With Us
-    </div>
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
-</a>-->
+
+
+
+
+
+
+
 
 
 <script>
+        
 
-
- 
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
     document.getElementById("countryList").classList.toggle("show");
@@ -2397,102 +1829,23 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 
 
 
-  (function highlightActiveNav() {
-    // Get the current page's filename, e.g. "about.html"
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".nav-links > a").forEach(link => {
-      const linkPage = link.getAttribute("href");
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  })();
+(function(){
+  var nav = document.querySelector('.nav-links');
+  var body = document.body;
+  function open(){ nav && nav.classList.add('open'); body.classList.add('menu-open'); }
+  function close(){ nav && nav.classList.remove('open'); body.classList.remove('menu-open');
+    document.querySelectorAll('.menu-container.open').forEach(function(m){ m.classList.remove('open'); }); }
+  document.getElementById('navToggle')?.addEventListener('click', function(e){ e.preventDefault(); open(); });
+  document.getElementById('navClose')?.addEventListener('click', function(e){ e.preventDefault(); close(); });
+  document.querySelector('.nav-backdrop')?.addEventListener('click', close);
+  document.querySelector('.submenu-toggle')?.addEventListener('click', function(e){
+    e.preventDefault(); e.stopPropagation();
+    this.closest('.menu-container')?.classList.toggle('open'); });
+  nav?.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  window.addEventListener('resize', function(){ if(innerWidth > 900) close(); });
+})();
 
-
-
-
-
-
-
-
-
-const acc = document.querySelectorAll(".accordion");
-    acc.forEach(button=>{
-    button.addEventListener("click",()=>{
-const panel=button.nextElementSibling;
-const open=document.querySelector(".accordion.active");
-    if(open && open!==button){
-    open.classList.remove("active");
-    open.querySelector(".arrow").innerHTML="&#9660;";
-    open.nextElementSibling.style.maxHeight=null;
-    }
-    button.classList.toggle("active");
-    if(panel.style.maxHeight){
-    panel.style.maxHeight=null;
-    button.querySelector(".arrow").innerHTML="&#9660;";
-    }else{
-    panel.style.maxHeight=panel.scrollHeight+"px";
-    button.querySelector(".arrow").innerHTML="&#9650;";
-    }
-
-    });
-
-    });
-
-    document.querySelector(".panel.show").style.maxHeight=
-    document.querySelector(".panel.show").scrollHeight+"px";
-
-
-
-
-
-
-/*===========Drag an drop========*/
-const dropArea = document.getElementById("dropArea");
-const fileInput = document.getElementById("cvFile");
-const fileName = document.getElementById("fileName");
-
-// Show selected file name
-fileInput.addEventListener("change", () => {
-    if(fileInput.files.length > 0){
-        fileName.textContent = "Selected: " + fileInput.files[0].name;
-    }
-});
-
-// Prevent default browser behavior
-["dragenter","dragover","dragleave","drop"].forEach(eventName => {
-    dropArea.addEventListener(eventName, preventDefaults, false);
-});
-
-function preventDefaults(e){
-    e.preventDefault();
-    e.stopPropagation();
-}
-
-// Highlight when dragging
-["dragenter","dragover"].forEach(eventName => {
-    dropArea.addEventListener(eventName, () => {
-        dropArea.classList.add("active");
-    });
-});
-
-["dragleave","drop"].forEach(eventName => {
-    dropArea.addEventListener(eventName, () => {
-        dropArea.classList.remove("active");
-    });
-});
-
-// Handle dropped files
-dropArea.addEventListener("drop", (e) => {
-    const files = e.dataTransfer.files;
-    if(files.length > 0){
-        fileInput.files = files;
-        fileName.textContent = "Selected: " + files[0].name;
-    }
-});
 </script>
 </body>
 </html>

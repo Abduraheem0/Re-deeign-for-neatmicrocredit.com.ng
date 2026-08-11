@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-            
 
 *{
     margin:0;
@@ -387,10 +386,6 @@ body{
 
 
 
-
-
-
-
 /* =========================
    FUND CALCULATOR
 ========================= */
@@ -482,20 +477,17 @@ body{
 
 
 
-
-
-
-
 /*=========================
       SAVINGS HERO
 ==========================*/
 
 .savings-hero{
     position: relative;
-    background: url("saving.png") center/cover no-repeat;
-    height: 1200px;
+    background: url("../images/saving.png") center/cover no-repeat;
+    height: 550px;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .overlay{
@@ -522,7 +514,7 @@ body{
 }
 
 .hero-left h1{
-    font-size:38px;
+    font-size:50px;
     font-weight:700;
     line-height:1.2;
     margin-bottom:25px;
@@ -584,156 +576,98 @@ body{
 
 
 
+.saving-products{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:70px 5%;
+    gap:80px;
+}
+
+.saving-image{
+    width:50%;
+}
+
+.saving-image img{
+    width:100%;
+    border-radius:4px;
+}
+
+.saving-content{
+    width:45%;
+    margin-top: 100px;
+}
+
+.saving-content h1{
+    color:#2f16b3;
+    font-size:40px;
+    margin-bottom:20px;
+
+}
+
+.intro{
+
+    color:#777;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.accordion{
+    width:100%;
+    background:white;
+    border: none;
+    border-radius:40px;
+    padding:20px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:700;
+    color:#2f16b3;
+    transition:.3s;
+}
+.accordion:hover{
+    border:solid;
+    color: #111 ;
+}
+.arrow{
+
+    font-size:22px;
+    transition:.3s;
+
+}
+
+.panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+    padding:0 28px;
+
+}
+
+.panel p{
+    padding:20px 0;
+    color:#555;
+    line-height:1.8;
+    font-size:18px;
+
+}
+
+.show{
+    max-height:200px;
+}
 
 
-/* =========Calculator================*/
-        .main {
-            margin-left: 70px;
-            display: flex;
-            gap: 90px;
-            margin-right: 10px;
-        }
-        
-        /* Yellow Calculator Panel - Exact match */
-        .calculator {
-            background: #f8f512;
-            width: 600px;
-            padding: 35px 30px;
-            border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            height: 400px;
-        }
-        
-        .calculator h1 {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.05;
-            margin-bottom: 28px;
-        }
-        
-        /* Amount Section */
-        .amount-section {
-            margin-bottom: 38px;
-        }
-        
-        .amount-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-        
-        .amount-value {
-            background: #f8f512;
-            border: none #111111;
-            border-radius: 6px;
-            padding: 10px 20px;
-            font-size: 20px;
-            font-weight: 700;
-            text-align: center;
-            margin: 12px auto 18px;
-            width: 140px;
-            margin-top: -50px;
-        }
-        
-        .slider {
-            width: 100%;
-            height: 8px;
-            background: #D1D5DB;
-            border-radius: 9999px;
-            outline: none;
-            -webkit-appearance: none;
-            position: relative;
-            
-        }
-        
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 26px;
-            height: 26px;
-            background: #FFFFFF;
-            border: 3px solid #000000;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        
-        /* Weeks Section */
-        .weeks-section {
-            margin-top: 12px;
-        }
-        
-        .weeks-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 30px;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-        
-        .weeks-value {
-            background: #f8f512;
-            border: none #111111;
-            border-radius: 6px;
-            padding: 8px 18px;
-            font-size: 20px;
-            font-weight: 700;
-            text-align: center;
-            margin: 12px auto 18px;
-            width: 140px;
-             margin-top: -50px;
-        }
-        
-        /* Repayment Info */
-        .repayment {
-            margin-top: 30px;
-            font-size: 17px;
-            line-height: 1.4;
-        }
-        
-        .repayment-amount {
-            font-weight: 700;
-        }
-        
-        .total-pay {
-            font-size: 23px;
-            font-weight: 700;
-            margin-top: 12px;
-        }
-        
-        /* Right Side */
-        .right {
-          margin-top: 50px;
-            padding-top: 40px;
-            max-width: 680px;
-        }
-        
-        .right h2 {
-            font-size: 26px;
-            line-height: 1.15;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-        
-        .apply-btn {
-            border: 2px solid #312E81;
-            color: #312E81;
-            background: transparent;
-            padding: 14px 36px;
-            font-size: 17px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        
-        .apply-btn:hover {
-            background: #312E81;
-            color: white;
-        }
 
 
-/*==================Footer=======================*/
+
+/* =========================
+   FOOTER
+========================= */
+
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -951,7 +885,6 @@ body{
     color: #1a1a1a;
     font-size: 12px;
   }
-    
 
 
 
@@ -964,66 +897,7 @@ body{
 
 
 
-  
-@media (max-width: 900px){
-  body{ overflow-x:clip; }
-  img{ max-width:100%; height:auto; }
 
- 
-
-  body.menu-open{ overflow:hidden; }
-  .site-search-panel{ right:0; left:auto; width:min(86vw,320px); }
-
-  /* FUND INTRO */
-  .fund-section{ flex-direction:column; gap:16px; padding:24px 18px; }
-  .fund-left,.fund-right{ width:100% !important; padding:0 !important; }
-  .fund-left h1{ font-size:clamp(24px,7vw,30px); margin-bottom:14px; }
-  .fund-left > p{ font-size:15px; }
-  .fund-right h2{ font-size:17px; margin-bottom:10px; }
-  .line{ width:100%; }
-
-  /* HERO */
-  .savings-hero{ height:auto; padding:40px 0; background-attachment:scroll; }
-  .hero-content{ flex-direction:column; align-items:stretch; gap:24px; padding:0 18px; }
-  .hero-left,.requirements-box{ width:100% !important; }
-  .hero-left h1{ font-size:clamp(24px,7.5vw,32px); }
-  .hero-left p{ font-size:14px; line-height:1.7; }
-  .requirements-box{ padding:20px 18px; }
-  .requirement{ gap:12px; margin-bottom:16px; }
-  .tick{ width:32px; height:32px; font-size:16px; }
-  .requirement p{ font-size:15px; }
-
-  /* CALCULATOR */
-  .main{ flex-direction:column; gap:28px; margin:0 !important; padding:28px 18px; }
-  .calculator{ width:100% !important; height:auto !important; padding:24px 18px; }
-  .calculator h1{ font-size:clamp(22px,6.5vw,28px); }
-  .amount-value,.weeks-value{ font-size:24px; }
-  .amount-labels,.weeks-labels{ font-size:13px; }
-  .repayment{ font-size:15px; }
-  .total-pay{ font-size:18px; }
-  .slider{ width:100%; }
-  .right{ max-width:100% !important; margin:0 !important; padding:0 !important; }
-  .right h2{ font-size:20px; margin-bottom:18px; }
-  .apply-btn{ width:100%; padding:14px 20px; }
-
-  /* FOOTER */
-  .footer{ padding:34px 18px 40px !important; }
-  .footer-grid{ grid-template-columns:1fr !important; gap:26px; }
-  .footer-middle{ grid-template-columns:1fr !important; }
-  .footer-badges{ flex-wrap:wrap; gap:12px; }
-  .footer-map,.map-wrap{ width:100% !important; }
-  .map-wrap iframe,.map-wrap img{ width:100% !important; height:260px !important; }
-  .map-wrap > *{ max-width:100% !important; }
-  .map-wrap iframe{ min-width:100% !important; }
-  .footer-bottom{ width:100% !important; margin-top:10px !important; flex-wrap:wrap; justify-content:center; }
-  .last-part{ flex-direction:column; gap:10px; text-align:center; padding:16px 0; }
-  .left-last-part,.right-last-part{ padding:0 16px !important; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
-}
-@media (max-width:480px){
-  .top-btn{ font-size:11px; padding:5px 10px; }
-  .logo-text h2{ font-size:16px; }
-  .tick{ width:28px; height:28px; font-size:14px; }
-}
 
 
      
@@ -1571,10 +1445,10 @@ html{
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
 
-
     </style>
 </head>
 <body>
+    
 
 <!-- =========================  TOP HEADER    ======================== -->
 
@@ -1673,7 +1547,7 @@ html{
   </div>
 
   <div class="logo-section">
-    <img src="logo.png" class="logo">
+    <img src="../images/logo.png" class="logo">
     <div class="logo-text">
       <h2>N.E.A.T MICROREDIT</h2>
       <p>...Changing the face of business in Africa</p>
@@ -1711,20 +1585,13 @@ html{
 
 
 
-
-
-
-
-
-
-
-      <!-- =========================
+  <!-- =========================
      FUND CALCULATOR SECTION
 ========================= -->
 
 <section class="fund-section">
     <div class="fund-left">
-        <h1>S.M.E Fund</h1>
+        <h1>Business Advisory</h1>
     </div>
 
     <!-- RIGHT CALCULATOR -->
@@ -1735,7 +1602,6 @@ html{
     </div>
 </section>
 <hr class="line">
-<br>
 
 
 
@@ -1749,11 +1615,17 @@ html{
         <div class="hero-left">
 
             <h1>
-                S.M.E Fund Eligibility
+                N.E.A.T Term Deposit <br>
             </h1>
 
             <p>
-                Grow and expand your business with us. A range of easily accessible SME fund.
+                Protect your returns and plan ahead… <br><br>
+                <p>
+                    N.E.A.T Microcredit can help you plan for the future with our 
+                    range of Term Deposits. By fixing a high ROI on your savings, 
+                    N.E.AT Term Deposits can guarantee the rate on your savings for a 
+                    term within a timeframe chosen by you.
+                </p>
             </p>
 
         </div>
@@ -1766,110 +1638,41 @@ html{
             <div class="requirement">
                 <div class="tick">✔</div>
                 <p>
-                    Fully completed application form (signed)
+                    High Net worth Individuals (HNIs)
                 </p>
             </div>
 
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Account statement from 6 or 12-months sales record, 
-                                purchase invoice e.t.c
-                            </p>
-                        </div>
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                    Individuals and Corporate organizations can apply
+                </p>
+            </div>
 
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Co-operate Affair Certificate (C.A.C) (applicable to corporate customer)
-                            </p>
-                        </div>
+             <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                   Filled Our Term Deposit Form
+                </p>
+            </div>
 
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Credit search reports of both guarantor and customer.
-                            </p>
-                        </div>
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                   One passport photograph
+                </p>
+            </div>
 
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Detailed cash flow
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                 Tax Identification Certificate (T.I.N) (applicable to corporate customer)
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Qualified and satisfied guarantor with stable incomes (r work with reputable 
-                                organization or own a registered business)
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Duly completed guarantors form, 6-month statement, id card of two guarantor
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Duly completed guarantors form, 6-month statement, id card of two guarantor
-                                100% stock collateral
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                5% processing fee
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                               Update and valid utility bill customers office/shop and house
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Rent receipt of the customers’ business place
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                Six cheque leaflet from the client of guarantors duly signed.
-                            </p>
-                        </div>
-
-                        <div class="requirement">
-                            <div class="tick">✔</div>
-                            <p>
-                                 Absent of cheque guarantor can pledge stocks.
-                            </p>
-                        </div>
-
-
+            <div class="requirement">
+                <div class="tick">✔</div>
+                <p>
+                   Customer Investment advice.
+                </p>
+            </div>
 
         </div>
     </div>
 </section>
-<br><br>
 
 
 
@@ -1880,54 +1683,37 @@ html{
 
 
 
+<section class="saving-products">
 
-
-<div class="main">
-        <!-- Left: Yellow Calculator -->
-        <div class="calculator">
-            <h1>Calculate the Amount<br>You Need?</h1>
-            
-            <!-- Amount -->
-            <div class="amount-section">
-                <div class="amount-labels">
-                    <span>₦50,000</span>
-                    <span>₦1,000,000</span>
-                </div>
-                <div class="amount-value" id="amountDisplay">₦500,000</div>
-                <input type="range" class="slider" id="amountSlider" 
-                       min="50000" max="1000000" value="500000" step="1000">
-            </div>
-            
-            <!-- Weeks -->
-            <div class="weeks-section">
-                <div class="weeks-labels">
-                    <span>1 weeks</span>
-                    <span>24 weeks</span>
-                </div>
-                <div class="weeks-value" id="weeksDisplay">10 weeks</div>
-                <input type="range" class="slider" id="weeksSlider" 
-                       min="1" max="24" value="10" step="1">
-            </div>
-            
-            <!-- Results -->
-            <div class="repayment">
-                Your repayments is <span class="repayment-amount" id="repayment">₦19,500</span> every weeks at <span id="rate">30%</span><br>
-                <span class="total-pay">Total you will Pay: <span id="total">₦650,000</span></span>
-            </div>
-        </div>
-        
-        <!-- Right Side -->
-        <div class="right">
-            <h2>Grow and expand your business with<br>N.E.A.T Asset Fund.</h2>
-            <button class="apply-btn" onclick="alert('Apply Now - Form would open here')">Apply Now</button>
-        </div>
+    <!-- Left -->
+    <div class="saving-image">
+        <img src="../images/laptop.png" alt="">
     </div>
 
+    <!-- Right -->
+    <div class="saving-content">
+
+        <p class="intro">
+            N.E.A.T Term Deposit is made for the investor who requires more value 
+            for his money. It offers higher returns than the conventional term deposit 
+            and has fixed tenures of either 6 months or one year.
+        </p>
+
+    
+
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
 
-<!---------------Footer--------------------------->
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
   <div class="footer-grid">
@@ -2052,11 +1838,22 @@ html{
 
 
 
+ =========================
+     WHATSAPP CHAT
+=========================
+<!-----
+<a href="https://wa.me/2347061421985" class="whatsapp-chat" target="_blank">
+    <div class="chat-label">
+        Need Help? Chat With Us
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
+</a>-->
 
 
 <script>
- 
+
+
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
     document.getElementById("countryList").classList.toggle("show");
@@ -2219,38 +2016,36 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 
 
 
-/*================Calculator==========================================*/
-const amountSlider = document.getElementById('amountSlider');
-        const weeksSlider = document.getElementById('weeksSlider');
-        const amountDisplay = document.getElementById('amountDisplay');
-        const weeksDisplay = document.getElementById('weeksDisplay');
-        const repaymentEl = document.getElementById('repayment');
-        const totalEl = document.getElementById('total');
-        
-        function updateValues() {
-            const principal = parseFloat(amountSlider.value);
-            const weeks = parseInt(weeksSlider.value);
-            
-            // Amount display
-            amountDisplay.textContent = '₦' + principal.toLocaleString('en-US');
-            
-            // Weeks display
-            weeksDisplay.textContent = weeks + ' weeks';
-            
-            // Calculation: Flat 30% interest
-            const total = Math.round(principal * 1.3);
-            const weeklyPayment = Math.round(total / weeks);
-            
-            repaymentEl.textContent = '₦' + weeklyPayment.toLocaleString('en-US');
-            totalEl.textContent = '₦' + total.toLocaleString('en-US');
-        }
-        
-        amountSlider.addEventListener('input', updateValues);
-        weeksSlider.addEventListener('input', updateValues);
-        
-        // Initialize
-        updateValues();
 
+
+
+
+/*========================================================*/
+const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button=>{
+    button.addEventListener("click",()=>{
+const panel=button.nextElementSibling;
+const open=document.querySelector(".accordion.active");
+    if(open && open!==button){
+    open.classList.remove("active");
+    open.querySelector(".arrow").innerHTML="&#9660;";
+    open.nextElementSibling.style.maxHeight=null;
+    }
+    button.classList.toggle("active");
+    if(panel.style.maxHeight){
+    panel.style.maxHeight=null;
+    button.querySelector(".arrow").innerHTML="&#9660;";
+    }else{
+    panel.style.maxHeight=panel.scrollHeight+"px";
+    button.querySelector(".arrow").innerHTML="&#9650;";
+    }
+
+    });
+
+    });
+
+    document.querySelector(".panel.show").style.maxHeight=
+    document.querySelector(".panel.show").scrollHeight+"px";
 
 </script>
 </body>

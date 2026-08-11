@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+            
+
 
 *{
     margin:0;
@@ -390,337 +392,116 @@ body{
 
 
 
+/* =========================
+   FUND CALCULATOR
+========================= */
 
-/*============Contact=================*/
-.contact-section{
-    width:100%;
-    padding:70px 6%;
-    background:#fff;
-}
-
-.contact-header{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    margin-bottom:30px;
-}
-
-.contact-header span{
-    font-size:17px;
-    font-weight:700;
-    color:#1b1b1b;
-}
-
-.contact-header .line{
-    flex:1;
-    height:3px;
-    background:#e3e3ef;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:70px;
-}
-
-.contact-left h1{
-    font-size:40px;
-    line-height:1.05;
-    color:#1b2679;
-    font-weight:700;
-    margin-bottom:25px;
-}
-
-.contact-left a{
-    color:#1b2679;
-    text-decoration:underline;
-}
-
-.contact-left p{
-    font-size:10pxpx;
-    color:#222;
-}
-
-.info-box{
-    margin-bottom:45px;
-}
-
-.info-box h4{
-    color:#1b2679;
-    font-size:19px;
-    margin-bottom:18px;
-    font-weight:700;
-}
-
-.info-box p{
-    font-size:17px;
-    color:#111;
-    line-height:1.6;
-    margin-bottom:18px;
-}
-
-.info-box a{
-    color:#ef6a63;
-    text-decoration:none;
-    font-size:17px;
-    font-weight:600;
-}
-
-.info-box a:hover{
-    text-decoration:underline;
-}
-
-/* Responsive */
-
-@media(max-width:992px){
-
-.contact-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-}
-
-.contact-left h1{
-    font-size:48px;
-}
-
-.contact-left p,
-.info-box p,
-.info-box a,
-.info-box h4{
-    font-size:20px;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.office{
-  text-align: center;
-  font-size: 30px;
-  background:#fff ;
-}
-/*====================Board==================*/
-
-.board-section{
-    width: 100%;
-    padding: 60px 8%;
-    background: #fff;
-}
-.board-container{
-    max-width:1500px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr); /* Four cards per row */
-    gap:30px;
-}
-.board-card:hover{
-    color: yellow;
-    background: yellow;
-}
-.board-card{
-    text-align: center;
-}
-.board-card{
-    background:#fff;
-    padding:15px;
-    border: none;
-    border-radius:8px;
-    text-align:left;
-}
-
-.board-card h3{
-    color:#000000;
-    font-size:20px;
-    margin-bottom:12px;
-}
-
-.board-card p{
-    font-size:16px;
-    color:#555;
-    line-height:1.6;
-}
-/* Tablet */
-@media (max-width:992px){
-    .board-container{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-/* Mobile */
-@media (max-width:768px){
-    .board-container{
-        grid-template-columns:1fr;
-    }
-}
-
-
-
-
-/*===========Map===============*/
-.map-container {
-  margin-top: 30px;
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 500px;
-  border-radius: 10px;
-  border: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-.contact-form-section{
-    background:#f7f7f7;
-    padding:70px 20px;
-}
-
-.contact-form{
-    max-width: 900px;
-    margin:auto;
-    background:#fff;
-    padding:45px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    margin-top: -130px;
-    position: sticky;
-
-}
-
-.form-header{
+.fund-section{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    margin-bottom:35px;
+    align-items:flex-start;
+    gap:40px;
+    padding:40px 4%;
+    background:#f3f3f3;
+    padding: 10px;
 }
 
-.form-header h2{
-    font-size:40px;
-    color:#1f2437;
+/* LEFT SIDE */
+
+.fund-left{
+    width:50%;
+    padding-top: 30px;
+    padding-left: 60px;
+}
+
+.fund-left h1{
+    font-size:30px;
     font-weight:700;
+    color:#220468;
+    line-height:1.1;
+    margin-bottom:28px;
 }
 
-.plane{
-    font-size:45px;
-    color:#d9d9d9;
-    transform:rotate(-15deg);
-}
 
-.form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    margin-bottom:18px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-    width:100%;
-    padding:18px 24px;
-    border:1px solid #e2e2e2;
-    outline:none;
-    font-size:16px;
-    color:#333;
-    border-radius:3px;
-    transition:.3s;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus{
-
-    border-color:#1f4d6b;
-}
-
-.contact-form select{
-    margin-bottom:18px;
-    background:white;
-}
-
-.contact-form textarea{
-    height:170px;
-    resize:none;
+.fund-left > p{
+    color:#8a8a99;
+    font-size:17px;
     margin-bottom:20px;
 }
 
-.checkbox-area{
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-    margin-bottom:25px;
+/* RIGHT SIDE */
+
+.fund-right{
+    width:35%;
+    padding-top: 30px;
+   font-size: 20px;
+    
 }
 
-.checkbox-area input{
-    width:18px;
-    height:18px;
-    margin-top:3px;
-}
-
-.checkbox-area label{
-    font-size:14px;
-    color:#666;
-    line-height:1.6;
-}
-
-.checkbox-area a{
-    color:#666;
-    text-decoration:underline;
-}
-
-.contact-form button{
-    width:100%;
-    background:#184f6b;
-    color:white;
-    border:none;
-    padding:18px;
-    font-size:20px;
-    font-weight:600;
-    border-radius:3px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.contact-form button:hover{
-    background:#143f56;
-}
-
-@media(max-width:768px){
-.form-row{
-    grid-template-columns:1fr;
-}
-.contact-form{
-    padding:30px;
-}
-.form-header h2{
-    font-size:30px;
-}
+.fund-right h2{
+    font-size:29px;
+    line-height:1.15;
+    color:#2f16b3;
+    margin-bottom:30px;
+    font-weight:70;
 
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* MOBILE */
 
+@media(max-width:1000px){
+
+    .fund-section{
+        flex-direction:column;
+    }
+
+    .fund-left,
+    .fund-right{
+        width:100%;
+    }
+
+    .fund-right{
+        min-height:auto;
+    }
+
+}
+
+.line{
+    height: 4px;
+    background-color: #230083;
+    border: none;
+    width: 100vw;
+    margin-top: 1px;
+}
+
+
+
+
+
+
+
+.page-note{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 100px;
+
+}
+.page-note p{
+    font-family: 'Times New Roman', Times, serif;
+
+    color:#8a8a99;
+    font-size:17px;
+    margin-bottom:20px;
+    letter-spacing: 1px;
+    border-spacing: 20px;
+}
+.page-note h1{
+    margin-bottom:20px;
+}
+
+
+
+/*==============Footer=====================*/
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -938,6 +719,17 @@ body{
     color: #1a1a1a;
     font-size: 12px;
   }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1490,8 +1282,6 @@ html{
 
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
-
-
     </style>
 </head>
 <body>
@@ -1594,7 +1384,7 @@ html{
   </div>
 
   <div class="logo-section">
-    <img src="logo.png" class="logo">
+    <img src="../images/logo.png" class="logo">
     <div class="logo-text">
       <h2>N.E.A.T MICROREDIT</h2>
       <p>...Changing the face of business in Africa</p>
@@ -1634,304 +1424,97 @@ html{
 
 
 
-
-
-
-
-<!-----------------------Content------------------------------------>
-<section class="contact-section">
-
-    <div class="contact-header">
-        <span>GET TO KNOW US</span>
-        <div class="line"></div>
-    </div>
-
-    <div class="contact-grid">
-
-        <!-- Left -->
-        <div class="contact-left">
-
-            <h1>
-                Have a question in
-                <br>
-                mind?
-                <a href="#">Let's talk.</a>
-            </h1>
-
-            <p>How may we help you today</p>
-
-        </div>
-
-        <!-- Middle -->
-        <div class="contact-info">
-
-            <div class="info-box">
-                <h4>HEAD OFFICE</h4>
-
-                <p>
-                    N.E.A.T Microcredit<br>
-                    NF5 Oyo Road, Central Business<br>
-                    District, Kaduna, Kaduna State – Nigeria.
-                </p>
-
-                <a href="#">neatmicrocredit@gmail.com</a>
-
-            </div>
-
-            <div class="info-box">
-
-                <h4>PHONE</h4>
-
-                <p>(080) 3081-1412</p>
-
-            </div>
-
-        </div>
-
-        <!-- Right -->
-        <div class="contact-info">
-
-            <div class="info-box">
-
-                <h4>CAREER</h4>
-
-                <p>
-                    Would you like to join our
-                    growing team?
-                </p>
-
-                <a href="#">career@neatmicrocredit.com.ng</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-<div class="office">
-  <h1>Branch Offices</h1>
-</div>
-
-
-<section class="board-section">
-    <div class="board-container">
-            <div class="board-card">
-                <h3>Kaduna 1</h3>
-                <p>G19 NUT Building, 
-                    <p>Mogadishu Layout,</p>
-                    <p>Kaduna. Nigeria</p>
-                    <p>Kaduna, Nigeria</p><br>
-                    <p>08032901870</p>
-                </p>
-            </div>
-
-            <div class="board-card">
-                <h3>kaduna 2</h3>
-                <p>No. 83 Opposite KAPSUDA,
-                    <p> Kachia Road, Sabon Tasha,</p>
-                    <p>Kaduna. Nigeria</p><br>
-                    <p>07064177711</p>
-                </p>
-            </div>
-
-            <div class="board-card">
-                <h3>GoninGora (Kaduna)</h3>
-                <p>No. 2 Lamige Road,
-                    <p> End of Sarki Obadia Junction Flat</p>
-                    <p> Flat B No.5 Sarki Street,</p>
-                    <p>  Gonin Gora</p>
-                    <p>Kaduna. Nigeria</p> <br>
-                    <p>09035991639</p>
-                   
-
-
-                </p>
-            </div>
-
-                   <div class="board-card">
-                <h3>Zaria Office (Kaduna)</h3>
-                <p>No. 14, No.2C Traders Plaza,
-                    <p> Sokoto Road, MTD, Zaria</p><br>
-                    <p>09031897555</p>
-                </p>
-            </div>
-
-            <div class="board-card">
-                <h3>Kawo (Kaduna)</h3>
-                <p>No. 5 Alhaji Sani Usman</p>
-                <p>Plaza, Opp. Kawo Football Field, Sabon Birni Street, <p>Kawo.</p></p>
-                <p>Kaduna. Nigeria</p><br>  
-                <p>08141440391</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Karu Office (Abuja)</h3>
-                <p>First Floor, Suite 24, Sifa Plaza, Abuja-</p>
-                <p>Keffi Express Way, Sharp Corner,</p>
-                <p>Mararaba Karu, Nasarawa State
-                    <p>Abuja. Nigeria</p><br>
-                    <p>08118472602</p>
-                </p>
-            </div>
-
-            <div class="board-card">
-                <h3>Gwagwalada(Abuja)</h3>
-                <p>Suite 22 Ojuku Ojeje Plaza,</p>
-                <p>Secretariat Road, Gwagwalada, FCT,</p><br>
-                <p>Abuja. Nigeria</p>
-                <p>08100030640</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Suleja (Abuja)</h3>
-                <p>M. Sani Plaza, Off old Barracks Road,</p>
-                <p>Ungwan Gwari Junction, Suleja.</p>
-                <p>Abuja. Nigeria</p><br>
-                <p>Abuja. Nigeria</p>
-                <p>08118472645</p>
-            </div>
-
-                   <div class="board-card">
-                <h3>Ilorin Office 1 (Kwara State)</h3>
-                <p>Madawaki Estate, Opp Mrs. Filling Station, Beside Mabifu Diagnostic Centre, Taiwo Isale Ilorin, Kwara State.</p><br>
-                <p>09116905568</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Ilorin Office 2 (Kwara State)</h3>
-                <p>Close to Aflaman Petroleum, Opposite Redeemed Church, Danialu Area, Kwara State.</p><br>
-                <p>07064177711</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Offa (Kwara State)</h3>
-                <p>Second Floor, Abimbola Plaza, Traffic Junction, Omu-Aran Kwara State
-                    No. 47 Olofa Way, Behind Femtech, Omu-Aran Kwara State. </p><br>
-                <p>09132764430</p>
-            </div>
-
-            
-            <div class="board-card">
-                <h3>Omu-Aran (Kwara State)</h3>
-                <p>Dr. E.A Oladipo’s House, Oasis School Building,  Alakaka, Omu-Aran, Kwara State. </p><br>
-                <p>08075976330</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Hadeja RD Kano State (1)</h3>
-                <p>Duplex No. 9, 11/12 Helu Plaza, France Road by Galadima, Kano State.</p><br>
-                <p>09069710182</p>
-                
-            </div>
-
-                   <div class="board-card">
-                <h3>Sabon-Gari Kano State (2)</h3>
-                <p> Suite No. 2, Last Floor, Ummi Plaza Kabuga by Northwest Road, Kano State.</p><br>
-                <p>09069561098</p>
-            </div>
-
-            <div class="board-card">
-                <h3>ZOO RD Kano State (3)</h3>
-               <p> Suite No. 7, First Floor Musa Baba Plaza, Adjacent Taj Bank, Zoo Road, Kano State.</p><br>
-               <p>08082306070</p>
-            </div>
-
-            <div class="board-card">
-                <h3>Kabuga Kano State (4)</h3>
-                <p>Suite No. 6, Last Floor, Khadija BBK Plaza, Along Yankaba Motor Park, Hadejia Road, Kano State.</p><br>
-                <p>09071151845</p>
-            </div>
-    </div>
-</section>
-
-
-
-
-
-  <div class="map-container">
-  <iframe 
-    src="https://maps.google.com/maps?q=NF5, Oyo Road, Central Business District, Kaduna&t=&z=13&ie=UTF8&iwloc=&output=embed">
-  </iframe>
-</div>
-
-
-
-
-
-
-
-
-<section class="contact-form-section">
-
-    <div class="contact-form">
-
-        <div class="form-header">
-            <h2>Send us a message</h2>
-            <span class="plane">&#9992;</span>
-        </div>
-
-        <form>
-
-            <div class="form-row">
-
-                <input type="text" placeholder="Full name">
-
-                <input type="email" placeholder="Your email address">
-
-            </div>
-
-            <div class="form-row">
-
-                <input type="text" placeholder="Your Subject">
-
-                <input type="text" placeholder="Phone number">
-
-            </div>
-
-            <select>
-                <option selected>Select a product</option>
-                <option>Micro Fund</option>
-                <option>Savings</option>
-                <option>Business Advisory</option>
-                <option>Equity Investment</option>
-                <option>Term Deposit</option>
-            </select>
-
-            <textarea placeholder="Your message"></textarea>
-
-            <div class="checkbox-area">
-                <input type="checkbox" id="agree">
-
-                <label for="agree">
-                    I am bound by the terms of the Service.
-                    I accept <a href="#">Privacy Policy.</a>
-                </label>
-
-            </div>
-
-            <button type="submit">
-                Send message
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     FOOTER
+      <!-- =========================
+     FUND CALCULATOR SECTION
 ========================= -->
+
+<section class="fund-section">
+    <div class="fund-left">
+        <h1>Disclaimer</h1>
+    </div>
+
+    <!-- RIGHT CALCULATOR -->
+    <div class="fund-right">
+        <h2>
+           We Are Moving Africa Forward
+        </h2>
+    </div>
+</section>
+<hr class="line">
+<br>
+
+
+
+
+<section class="page-note">
+    <p>
+        The utmost care has been taken in the construction of this website. All information 
+        and data supplied by N.E.A.T Microcredit Nigeria on this website have been compiled to
+        the best of its knowledge and belief. Notwithstanding, N.E.A.T Microcredit does not assume 
+        any liability for their correctness, accuracy, completeness and timeliness or otherwise. 
+        This applies also to other websites that may be accessed through hyperlinks on this site. 
+        N.E.A.T Microcredit assumes no responsibility for the contents of websites that can be 
+        accessed through such links. Access to this or third-party website(s) and use of the 
+        documents which can be accessed from it shall be at the user’s own risk. The information 
+        supplied does not represent individual advice and cannot be taken as a substitute for such 
+        advice. Links to the homepage of N.E.A.T Microcredit are admissible if the retrieved 
+        N.E.A.T Microcredit website becomes the sole content of the browser window. N.E.A.T Microcredit 
+        reserves the right, at any time and without prior notice, to change, supplement or delete this 
+        site in whole or in part, or to temporarily or permanently cease the operation of this site, 
+        at its own discretion and without liability.
+    </p>
+    <h1>Use of Content</h1>
+    <p>
+        You may view, download, and print contents from this site subject to the following 
+        conditions: (a) the content may be used solely for non-commercial information purposes 
+        and for personal use; and (b) the content may not be modified or altered in any way. You may 
+        not republish, distribute, prepare derivative works, or otherwise use the content other than 
+        as explicitly permitted herein.
+    </p>
+    <h1>Copywright</h1>
+    <p>
+        All content published on this website, including but not limited to images, graphics, 
+        symbols, logos, and audio, video, animation and text documents in any file format and in any 
+        combination are protected by copyright, trademark and other laws for protection of intellectual 
+        property. The use, downloading, modification or reproduction of any and all images, graphics, 
+        symbols, logos, and audio, video, animation and text documents in any file format and in any 
+        combination require the prior written consent from the N.E.A.T Microcredit. All Internet sites 
+        of N.E.A.T Microcredit also contain images that are subject to the copyright rights of their 
+            providers.
+    </p>
+    <h1>Data Protection</h1>
+    <p>
+        The use of our website is possible without the provision of personal data. Any personal 
+        data such as (your) name, (your) address or e-mail address will only be recorded if you 
+        voluntarily provide us with this information. Once personal data is freely given, we shall 
+        not provide third parties with any personal data that you may have sent to us without first 
+        obtaining your express permission. We point out that data transmission in the internet 
+        (e.g. communication per e-mail) may contain security loopholes. Complete protection of data 
+        against access by third parties is therefore not guaranteed. We herewith explicitly object to 
+        the use of contact details that are published on this website through third parties for the 
+        sending of promotion or information material that has not been explicitly ordered. N.E.A.T 
+        Microcredit reserves the right to take legal steps in case of unsolicited sending of promotional 
+        material, e.g. through spam-mails.
+    </p>
+    <h1>General Provision</h1>
+    <p>
+        Any and all information or data, its use and application for inclusion in this website and 
+        any claim or suits relating to this website shall be governed and construed in accordance with 
+        the laws of Nigeria. The place of venue and exclusive jurisdiction shall be the legal domicile 
+        of the operator designated in the website credits.
+    </p>
+    <br>
+    <p>
+        N.E.A.T Microcredit is located at Suite G19/G20 Ground Flour, NUT Building, Mogadishu Layout 
+        Opposite KD Motors, Kaduna State and can be reached at +23470-8286-6633, +23470-3194-2724
+    </p>
+</section>
+
+
+
+
+
+<!------------------Footer------------------------------>
 
 <footer class="footer">
   <div class="footer-grid">
@@ -2056,9 +1639,13 @@ html{
 
 
 
-</body>
+
+
+
+
+
 <script>
-  
+ 
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
     document.getElementById("countryList").classList.toggle("show");
@@ -2219,59 +1806,6 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 });
 
 
-
-
-
-
-
- //................Location...................\\
-  const form = document.getElementById("bookingForm");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const data = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      checkin: document.getElementById("checkin").value,
-      checkout: document.getElementById("checkout").value,
-      room: document.getElementById("room").value,
-      guests: document.getElementById("guests").value
-    };
-
-    console.log("Booking Data:", data);
-
-    // THIS is where your backend connection will go later
-    /*
-    fetch("https://your-backend-api.com/book", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-    */
-
-    document.getElementById("successMsg").style.display = "block";
-    form.reset();
-  });
-
-  function getLocation() {
-  const output = document.getElementById("userLocation");
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      output.innerHTML = 
-        "📍 Your Location: Latitude " + position.coords.latitude +
-        ", Longitude " + position.coords.longitude;
-    }, function() {
-      output.innerHTML = "Unable to retrieve your location.";
-    });
-  } else {
-    output.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-
 </script>
+</body>
 </html>

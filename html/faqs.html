@@ -7,6 +7,8 @@
     <style>
         
 
+
+
 *{
     margin:0;
     padding:0;
@@ -22,7 +24,7 @@ body{
    TOP HEADER
 ========================= */
 
-.top-header{
+.top-header{  
     background:#2f16b3;
     padding:10px 6%;
     display:flex;
@@ -196,7 +198,13 @@ body{
 /*===========Site Search =============*/
 .site-search{
     position: relative;
+    order:3;              /* search sits at the far RIGHT on desktop */
+    margin-left:auto;     /* pushes it to the right edge */
 }
+
+/* desktop ordering: logo -> links -> search */
+.logo-section{ order:1; }
+.nav-links{ order:2; }
 
 .search-icon{
     font-size: 24px;
@@ -338,8 +346,10 @@ body{
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-.menu-container:hover .dropdown {
-  display: flex;
+@media (hover:hover) and (pointer:fine){
+  .menu-container:hover .dropdown {
+    display: flex;
+  }
 }
 
 .dropdown a {
@@ -372,100 +382,6 @@ body{
   opacity: 1;
   color: #2f16b3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-html{
-    scroll-behavior:smooth;
-}
-
-/* Sidebar */
-
-.products-sidebar{
-    width:220px;
-}
-
-.products-sidebar a{
-    display:block;
-    padding:12px 15px;
-    color:#2f2fd1;
-    text-decoration:none;
-    transition:.3s;
-    border-left:3px solid transparent;
-}
-
-.products-sidebar a:hover{
-    background:#FFD84D;
-    color:#000;
-    border-left:3px solid #2f2fd1;
-}
-
-/* Product Sections */
-
-.product-section{
-    padding:20px;
-    margin-bottom:40px;
-    border-radius:6px;
-    transition:.35s;
-}
-
-.product-section:hover{
-    background:#FFD84D;
-}
-
-/* Card */
-
-.product-card{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    background:#fff;
-    padding:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    border-radius:6px;
-}
-
-.product-card img{
-    width:150px;
-    height:150px;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-/* Title */
-
-.section-title{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-bottom:20px;
-}
-
-.section-title span{
-    flex:1;
-    height:3px;
-    background:#3228d7;
-}
-.products-sidebar a.active{
-    background:#FFD84D;
-    color:#000;
-    font-weight:bold;
-    border-left:4px solid #2f2fd1;
-}
-
-
-
 
 
 
@@ -522,7 +438,7 @@ html{
 }
 
 .fund-right h2{
-    font-size:20px;
+    font-size:29px;
     line-height:1.15;
     color:#2f16b3;
     margin-bottom:30px;
@@ -549,9 +465,6 @@ html{
 
 }
 
-
-
-
 .line{
     height: 4px;
     background-color: #230083;
@@ -563,62 +476,109 @@ html{
 
 
 
+/*==============FAQ / Term Deposit Accordion================*/
 
+.blue{
+    position: relative;
+    background: linear-gradient(135deg, #2a14b3 0%, #333a5c 100%);
+    padding-top: 90px;
+    padding-bottom: 70px;
+    overflow: hidden;
+}
 
+/* wavy white divider at the top of the section, matching the reference design */
+.blue-wave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: block;
+}
 
+.blue-back{
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 6%;
+}
 
-/* Main Products Layout */
+.accordion-item{
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
 
-.products-container{
-    width:90%;
-    margin:50px auto;
+.accordion-item:last-child{
+    border-bottom: none;
+}
+
+.accordion{
+    width:100%;
+    background:none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor:pointer;
+    padding: 18px 20px;
     display:flex;
-    gap:50px;
-    align-items:flex-start;
+    align-items:center;
+    gap: 14px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    transition: border-color 0.3s ease;
 }
 
-/* Sidebar */
-
-.products-sidebar{
-    width:220px;
-    flex-shrink:0;
-    position:sticky;
-    top:120px;
+.accordion .icon{
+    font-size: 13px;
+    color: #2980b9;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
-.products-sidebar h4{
-    color:#2f16b3;
-    margin-bottom:25px;
-    font-size:18px;
+.accordion.active{
+    border-color: #2980b9;
 }
 
-/* Content */
+.accordion.active .icon{
+    transform: rotate(90deg);
+}
 
-.products-content{
-    flex:1;
+.panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .5s ease;
+}
+
+.panel p{
+    padding: 0 20px 25px 54px;
+    color: rgba(255,255,255,0.75);
+    font-size:16px;
+    line-height:1.9;
+}
+
+.panel p ul{
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
 /* Mobile */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-.products-container{
-    flex-direction:column;
-}
+    .blue-back{
+        padding: 0 5%;
+    }
 
-.products-sidebar{
-    width:100%;
-    position:relative;
-    top:0;
-    margin-bottom:30px;
-}
+    .accordion{
+        font-size: 16px;
+    }
 
 }
 
 
 
-
-/*================Footer===================*/
+/*==================Footer====================*/
   .footer {
     background: #F3F3F3;
     padding: 50px 40px 30px;
@@ -836,6 +796,9 @@ html{
     color: #1a1a1a;
     font-size: 12px;
   }
+
+
+
 
 
 
@@ -1397,9 +1360,14 @@ html{
   .nav-backdrop.show{ background:rgba(0,0,0,.55); }
 }
 
-    </style>
+</style>
 </head>
 <body>
+
+
+
+
+
 
 <!-- =========================  TOP HEADER    ======================== -->
 
@@ -1498,7 +1466,7 @@ html{
   </div>
 
   <div class="logo-section">
-    <img src="logo.png" class="logo">
+    <img src="../images/logo.png" class="logo">
     <div class="logo-text">
       <h2>N.E.A.T MICROREDIT</h2>
       <p>...Changing the face of business in Africa</p>
@@ -1537,37 +1505,24 @@ html{
 
 
 
-
-
-
-
-
-  <!-- =========================
+      <!-- =========================
      FUND CALCULATOR SECTION
 ========================= -->
 
 <section class="fund-section">
-
     <div class="fund-left">
-
-        <h1>
-            N.E.A.T Product
-        </h1>
-
+        <h1>Frequently Asked Questions (F.A.Q's)</h1>
     </div>
 
     <!-- RIGHT CALCULATOR -->
-
     <div class="fund-right">
         <h2>
            We Are Moving Africa Forward
         </h2>
     </div>
-
 </section>
-
-
 <hr class="line">
+<br>
 
 
 
@@ -1576,79 +1531,106 @@ html{
 
 
 
+    <!--------------------List----------------->
+<div class="blue">
 
+    <svg class="blue-wave" viewBox="0 0 1357 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C200,20 400,20 640,55 C850,85 1050,85 1357,55 L1357,0 L0,0 Z" fill="#f5f5f5"></path>
+    </svg>
 
+<section class="blue-back">
+    <div class="accordion-item">
 
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>1. What are therequirements for account opening</span>
+            </button>
 
+            <div class="panel">
+                <p>
+                    A valid ID-card, and a minimum balance of N1,000.
+                </p>
+             </div>
 
-<div class="products-container">
+        </div>
 
-    <div class="products-sidebar">
-        <h4>N.E.A.T PRODUCTS</h4>
+        <!-- Growth Plan -->
+        <div class="accordion-item">
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>02. What kind of Id-card do you regard as valid</span>
+            </button>
+            <div class="panel">
+                <p>
+                    National ID card, International Passport, Driver’s license, Permanent voter’s card etc. that has not yet expired.
+                </p>
+            </div>
+        </div>
 
-        <a href="#micro-fund">Micro Fund</a>
-        <a href="#sme-fund">SME Fund</a>
-        <a href="#asset-fund">Asset Fund</a>
+        <div class="accordion-item">
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>3. How can I deposit without coming to your office premisses </span>
+            </button>
+            <div class="panel">
+                <p>
+                   Deposits can be made through varios platforms available:
+                   <ul>
+                        <li>Correspondent bank from our partner banks</li>
+                        <li>Internet banking transfer from all commercial banks in Nigeria.</li>
+                        <li>Electromic Transfer</li>
+                   </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>4. What are the interest rates on term deposit</span>
+            </button>
+            <div class="panel">
+                <p>
+                    The interest rate depends on the amount and maturity period. It is negotiable
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>5. What is the minimum I can fix</span>
+            </button>
+            <div class="panel">
+                <p>
+                    The minimum amount is N500, 000.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion">
+                <span class="icon">&#9654;</span>
+                <span>6. How can I get my Interests</span>
+            </button>
+            <div class="panel">
+                <p>
+                    Interest rate can be paid into your account monthly or upon maturity
+                </p>
+            </div>
+
+        </div>
     </div>
-
-    <div class="products-content">
-
-        <section id="micro-fund" class="product-section">
-             <h3 class="section-title">MICRO FUND
-                <span></span>
-            </h3>
-            <div class="product-card">
-                <img src="microfund.png" alt="Micro Fund">
-                <div class="product-content">
-                   <a href="microFund.html"> <h3>Apply Now</h3></a>
-                    <p>
-                        Micro Fund is a quick fund designed for urgent financing needs.
-                        Immediately available in the branch, our clients and customers
-                        will just have to go there and be disbursed.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="sme-fund" class="product-section">
-            <span></span>
-            <h3 class="section-title"> S.M.E FUND</h3>
-            <div class="product-card">
-                <img src="sme.png" alt="SME Fund">
-                <div class="product-content">
-                    <a href="sme.html"><h3>Apply Now</h3></a>
-                    <p>
-                        Grow and expand your business with us.
-                        A range of easily accessible SME funding.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="asset-fund" class="product-section">
-            <h3 class="section-title">
-                ASSET FUND
-                <span></span>
-            </h3>
-            <div class="product-card">
-                <img src="asset.png" alt="Asset Fund">
-                <div class="product-content">
-                    <a href="assetFund.html"><h3>Apply Now</h3></a>
-                    <p>
-                        Purchase productive assets for your business through our
-                        flexible Asset Fund packages.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
+</section>
 </div>
 
 
 
 
 
-<!------------------------Footer--------------------------------------->
+
+<!------------------------Footer------------------------------>
+
 
 <footer class="footer">
   <div class="footer-grid">
@@ -1777,14 +1759,8 @@ html{
 
 
 
-
-
-
-
-
-
 <script>
-
+    
  
 /*===========================Slect Country========================*/
   function toggleCountryMenu() {
@@ -1947,31 +1923,24 @@ document.querySelectorAll('.menu-container > .menu-btn').forEach(btn => {
 
 
 
-/*==============================================================*/
-const sections = document.querySelectorAll(".product-section");
-const navLinks = document.querySelectorAll(".products-sidebar a");
 
-window.addEventListener("scroll", () => {
 
-    let current = "";
 
-    sections.forEach(section => {
-        const top = section.offsetTop - 150;
+/*===============================================================*/
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(btn=>{
+    btn.addEventListener("click",function(){
+        this.classList.toggle("active");
+        const panel=this.nextElementSibling;
 
-        if(window.scrollY >= top){
-            current = section.getAttribute("id");
+        if(panel.style.maxHeight){
+            panel.style.maxHeight=null;
+        }else{
+            panel.style.maxHeight=panel.scrollHeight+"px";
         }
     });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if(link.getAttribute("href") === "#" + current){
-            link.classList.add("active");
-        }
-    });
-
 });
+
 </script>
 </body>
 </html>
