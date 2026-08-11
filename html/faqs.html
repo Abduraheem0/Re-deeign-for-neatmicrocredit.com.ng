@@ -198,13 +198,16 @@ body{
 /*===========Site Search =============*/
 .site-search{
     position: relative;
-    order:3;              /* search sits at the far RIGHT on desktop */
-    margin-left:auto;     /* pushes it to the right edge */
+    order:3;
+    margin-left:22px;   /* CHANGED: was margin-left:auto  */
 }
 
 /* desktop ordering: logo -> links -> search */
 .logo-section{ order:1; }
-.nav-links{ order:2; }
+.nav-links{
+    order:2;
+    margin-left:auto;   /* ADDED: pushes links to the right, beside search */
+}
 
 .search-icon{
     font-size: 24px;
@@ -381,6 +384,16 @@ body{
 .menu-btn.active {
   opacity: 1;
   color: #2f16b3;
+}
+/* ===== FIX: hide mobile-only nav controls on desktop ===== */
+.nav-close,
+.submenu-toggle{
+    display: none;
+}
+
+@media (max-width: 900px){
+    .nav-close{ display: flex; }
+    .submenu-toggle{ display: flex; }
 }
 
 
@@ -1443,7 +1456,7 @@ html{
 
     <div class="top-right">
 
-        <a href="microFund.html" class="top-btn">Get Funding</a>
+        <a href="products.html" class="top-btn">Get Funding</a>
         <a href="funding.html" class="top-btn">Open an Account</a>
         <a href="https://webmail.neatmicrocredit.com.ng/" class="top-btn">Email Login</a>
 

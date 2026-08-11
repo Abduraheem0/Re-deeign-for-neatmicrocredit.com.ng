@@ -372,6 +372,19 @@ body{
   opacity: 1;
   color: #2f16b3;
 }
+/*===========Site Search =============*/
+.site-search{
+    position: relative;
+    order:3;
+    margin-left:22px;   /* CHANGED: was margin-left:auto  */
+}
+
+/* desktop ordering: logo -> links -> search */
+.logo-section{ order:1; }
+.nav-links{
+    order:2;
+    margin-left:auto;   /* ADDED: pushes links to the right, beside search */
+}
 
 
 
@@ -635,7 +648,6 @@ body{
             background: #D1D5DB;
             border-radius: 9999px;
             outline: none;
-            -webkit-appearance: none;
             position: relative;
             
         }
@@ -1482,7 +1494,7 @@ html{
 
     <div class="top-right">
 
-        <a href="microFund.html" class="top-btn">Get Funding</a>
+        <a href="products.html" class="top-btn">Get Funding</a>
         <a href="funding.html" class="top-btn">Open an Account</a>
         <a href="https://webmail.neatmicrocredit.com.ng/" class="top-btn">Email Login</a>
 

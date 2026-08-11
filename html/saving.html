@@ -305,13 +305,16 @@ body{
 /*===========Site Search =============*/
 .site-search{
     position: relative;
-    order:3;              /* search sits at the far RIGHT on desktop */
-    margin-left:auto;     /* pushes it to the right edge */
+    order:3;
+    margin-left:22px;   /* CHANGED: was margin-left:auto  */
 }
 
 /* desktop ordering: logo -> links -> search */
 .logo-section{ order:1; }
-.nav-links{ order:2; }
+.nav-links{
+    order:2;
+    margin-left:auto;   /* ADDED: pushes links to the right, beside search */
+}
 
 .search-icon{
     font-size: 24px;
@@ -489,6 +492,21 @@ body{
   opacity: 1;
   color: #2f16b3;
 }
+/* ===== FIX: hide mobile-only nav controls on desktop ===== */
+.nav-close,
+.submenu-toggle{
+    display: none;
+}
+
+@media (max-width: 900px){
+    .nav-close{ display: flex; }
+    .submenu-toggle{ display: flex; }
+}
+
+
+
+
+
 
 
 
@@ -593,7 +611,7 @@ body{
 
 .savings-hero{
     position: relative;
-    background: url("../images/saving.png") center/cover no-repeat;
+    background: url("../images/saving.jpg") center/cover no-repeat;
     height: 430px;
     display: flex;
     align-items: center;
@@ -1006,6 +1024,65 @@ body{
 
 
 
+@media (max-width: 900px){
+  body{ overflow-x:clip; }
+  img{ max-width:100%; height:auto; }
+
+ 
+
+  body.menu-open{ overflow:hidden; }
+  .site-search-panel{ right:0; left:auto; width:min(86vw,320px); }
+
+  /* FUND INTRO */
+  .fund-section{ flex-direction:column; gap:16px; padding:24px 18px; }
+  .fund-left,.fund-right{ width:100% !important; padding:0 !important; }
+  .fund-left h1{ font-size:clamp(24px,7vw,30px); margin-bottom:14px; }
+  .fund-left > p{ font-size:15px; }
+  .fund-right h2{ font-size:17px; margin-bottom:10px; }
+  .line{ width:100%; }
+
+  /* HERO */
+  .savings-hero{ height:auto; padding:40px 0; background-attachment:scroll; }
+  .hero-content{ flex-direction:column; align-items:stretch; gap:24px; padding:0 18px; }
+  .hero-left,.requirements-box{ width:100% !important; }
+  .hero-left h1{ font-size:clamp(24px,7.5vw,32px); }
+  .hero-left p{ font-size:14px; line-height:1.7; }
+  .requirements-box{ padding:20px 18px; }
+  .requirement{ gap:12px; margin-bottom:16px; }
+  .tick{ width:32px; height:32px; font-size:16px; }
+  .requirement p{ font-size:15px; }
+
+  /* CALCULATOR */
+  .main{ flex-direction:column; gap:28px; margin:0 !important; padding:28px 18px; }
+  .calculator{ width:100% !important; height:auto !important; padding:24px 18px; }
+  .calculator h1{ font-size:clamp(22px,6.5vw,28px); }
+  .amount-value,.weeks-value{ font-size:24px; }
+  .amount-labels,.weeks-labels{ font-size:13px; }
+  .repayment{ font-size:15px; }
+  .total-pay{ font-size:18px; }
+  .slider{ width:100%; }
+  .right{ max-width:100% !important; margin:0 !important; padding:0 !important; }
+  .right h2{ font-size:20px; margin-bottom:18px; }
+  .apply-btn{ width:100%; padding:14px 20px; }
+
+  /* FOOTER */
+  .footer{ padding:34px 18px 40px !important; }
+  .footer-grid{ grid-template-columns:1fr !important; gap:26px; }
+  .footer-middle{ grid-template-columns:1fr !important; }
+  .footer-badges{ flex-wrap:wrap; gap:12px; }
+  .footer-map,.map-wrap{ width:100% !important; }
+  .map-wrap iframe,.map-wrap img{ width:100% !important; height:260px !important; }
+  .map-wrap > *{ max-width:100% !important; }
+  .map-wrap iframe{ min-width:100% !important; }
+  .footer-bottom{ width:100% !important; margin-top:10px !important; flex-wrap:wrap; justify-content:center; }
+  .last-part{ flex-direction:column; gap:10px; text-align:center; padding:16px 0; }
+  .left-last-part,.right-last-part{ padding:0 16px !important; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+}
+@media (max-width:480px){
+  .top-btn{ font-size:11px; padding:5px 10px; }
+  .logo-text h2{ font-size:16px; }
+  .tick{ width:28px; height:28px; font-size:14px; }
+}
 
      
 /* =========================================================
@@ -1631,7 +1708,7 @@ html{
 
     <div class="top-right">
 
-        <a href="microFund.html" class="top-btn">Get Funding</a>
+        <a href="products.html" class="top-btn">Get Funding</a>
         <a href="funding.html" class="top-btn">Open an Account</a>
         <a href="https://webmail.neatmicrocredit.com.ng/" class="top-btn">Email Login</a>
 
@@ -1698,7 +1775,7 @@ html{
 
 <section class="fund-section">
     <div class="fund-left">
-        <h1>Micro Fund</h1>
+        <h1>N.E.A.T Savings</h1>
     </div>
 
     <!-- RIGHT CALCULATOR -->
