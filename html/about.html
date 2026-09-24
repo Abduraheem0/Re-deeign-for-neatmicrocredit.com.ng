@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         
 
@@ -397,6 +398,66 @@ body{
 
 
 
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .hero-title{
+        font-size:45px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .top-header{
+        gap:15px;
+    }
+
+    .top-left,
+    .top-right{
+        flex-wrap:wrap;
+    }
+
+    .hero{
+        height:80vh;
+    }
+
+    .hero-title{
+        font-size:34px;
+    }
+
+    .small-text{
+        font-size:18px;
+    }
+
+    .apply-btn{
+        padding:15px 30px;
+        font-size:15px;
+    }
+
+    .logo-text h2{
+        font-size:24px;
+    }
+
+    .nav-links a{
+        font-size:15px;
+    }
+
+}
 
 
 
@@ -1946,8 +2007,8 @@ html{
 
   <div class="nav-links" id="navLinks">
     <button class="nav-close" id="navClose" aria-label="Close menu">&#10005;</button>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About Us</a>
+    <a href="index.html" >Home</a>
+    <a href="about.html" class="active">About Us</a>
     <div class="menu-container">
       <button class="menu-btn">N.E.A.T Products<span class="menu-btn-arrow">⌄</span></button>
       <button class="submenu-toggle" aria-label="Toggle products submenu">▾</button>

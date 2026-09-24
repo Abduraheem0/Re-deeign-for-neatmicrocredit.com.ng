@@ -6,7 +6,7 @@
 <title>NEAT Microcredit</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 <style>
 
 *{
@@ -525,7 +525,7 @@ body{
 }
 
 /* =========================
-   MOBILE
+   MOBILE  For NAv Links
 ========================= */
 
 @media(max-width:992px){
@@ -2762,7 +2762,7 @@ img{ max-width:100%; height:auto; }
         style="background-image:url('../images/portfolio investing.jpg');"></div>
 
          <div class="slide"
-        style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600');"></div>
+        style="background-image:url('../images/DSC_9497.JPG');"></div>
 
     </div>
 
@@ -3201,7 +3201,7 @@ img{ max-width:100%; height:auto; }
         <div class="testimonial-card">
             <div class="card-top">
                 <h4>Muhammad Sani Yau</h4>
-                <img src="images/customer1.jpg" alt="">
+                <img src="" alt="">
             </div>
 
             <div class="card-body">
@@ -3215,7 +3215,7 @@ img{ max-width:100%; height:auto; }
 
             <div class="card-top">
                 <h4>Rasheedat Zubairu</h4>
-                <img src="" alt="">
+                <img src="../images/DSC_9497.JPG" alt="">
             </div>
 
             <div class="card-body">
@@ -3231,7 +3231,7 @@ img{ max-width:100%; height:auto; }
         <div class="testimonial-card">
             <div class="card-top">
                 <h4>Patricia Kingsley Edeh</h4>
-                <img src="images/customer3.jpg" alt="">
+                <img src="" alt="">
             </div>
             <div class="card-body">
                 <p>
@@ -3276,7 +3276,7 @@ img{ max-width:100%; height:auto; }
                 </div>
 
                 <div class="img img2">
-                    <img src="../images/group.png" alt="">
+                    <img src="../images/wSewing machine.png" alt="">
                 </div>
 
                 <div class="img img3">
@@ -4096,5 +4096,169 @@ document.querySelectorAll('.fund-head').forEach(head => {
   .neat-milestone-card{ grid-template-columns:1fr 1fr !important; }
 }
 </style>
+
+<!-- ===== HERO TEXT SWITCHER + WORD-BY-WORD ANIMATION (paste before </body>) ===== -->
+<style>
+/* each word starts hidden, then fades/lifts in one after another */
+.hero .word{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(18px);
+  filter:blur(4px);
+  animation:heroWordIn .55s cubic-bezier(.2,.7,.3,1) forwards;
+}
+@keyframes heroWordIn{
+  to{ opacity:1; transform:translateY(0); filter:blur(0); }
+}
+.hero .small-text,
+.hero .apply-btn{ will-change:opacity,transform; }
+.hero .apply-btn.hero-reveal{
+  opacity:0; transform:translateY(14px);
+  animation:heroWordIn .5s ease forwards;
+}
+/* slide dots */
+.hero-dots{
+  position:absolute; left:50%; bottom:26px; transform:translateX(-50%);
+  display:flex; gap:10px; z-index:6;
+}
+.hero-dots button{
+  width:10px; height:10px; padding:0; border:none; border-radius:50%;
+  background:rgba(255,255,255,.45); cursor:pointer; transition:.3s;
+}
+.hero-dots button.active{ background:#ffee00; width:26px; border-radius:6px; }
+@media (prefers-reduced-motion:reduce){
+  .hero .word,.hero .apply-btn.hero-reveal{ animation:none; opacity:1; transform:none; filter:none; }
+}
+</style>
+
+<script>
+(function(){
+  var hero = document.querySelector('.hero');
+  if(!hero) return;
+
+  /* ---- EDIT THIS: one entry per slide, in the same order as your .slide divs ---- */
+  var HERO_CONTENT = [
+    { eyebrow:'Loan',
+      title:'Easy access to SME and Micro-Business',
+      highlight:'Loans to grow your business',
+      btn:'APPLY NOW', href:'saving.html' },
+
+    { eyebrow:'Business Advisory Services',
+      title:'We Provide',
+      highlight:'Innovative Solutions to Your Business Needs',
+      btn:'LEARN MORE', href:'advisory.html' },
+
+    { eyebrow:'Career At N.E.A.T',
+      title:"Picture yourself at one of Africa's best places to work,",
+      highlight:'surrounded by people who challenge you, support you, and inspire you to be world-class.',
+      btn:'APPLY NOW', href:'career.html' },
+
+    { eyebrow:'Asset Financing',
+      title:'Need it? We Finance it!',
+      highlight:'Get Your Asset Financing Today.',
+      btn:'APPLY NOW', href:'assetFund.html' },
+
+    { eyebrow:'Equity  Investment',
+      title:'Grow your money with',
+      highlight:'secure, high-yield investments',
+      btn:'START SAVING', href:'equity.html' },
+
+    { eyebrow:'N.E.A.T Microcredit',
+      title:'Financial solutions built',
+      highlight:'around your business',
+      btn:'GET A LOAN', href:'saving.html' }
+  ];
+
+  var eyebrow = hero.querySelector('.small-text');
+  var titleEl = hero.querySelector('.hero-title');
+  var btnEl   = hero.querySelector('.apply-btn');
+  var slides  = hero.querySelectorAll('.slide');
+  if(!titleEl || !slides.length) return;
+
+  /* build words, staggering the animation delay */
+  function words(text, cls, start){
+    var i = start || 0, out = '';
+    text.split(/\s+/).filter(Boolean).forEach(function(w){
+      out += '<span class="word'+(cls?' '+cls:'')+'" style="animation-delay:'+(i*0.075)+'s">'+
+             w.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span> ';
+      i++;
+    });
+    return { html: out, next: i };
+  }
+
+  function render(i){
+    var c = HERO_CONTENT[i % HERO_CONTENT.length];
+    if(!c) return;
+    var n = 0;
+
+    if(eyebrow){
+      var e = words(c.eyebrow, '', 0);
+      eyebrow.innerHTML = e.html; n = e.next;
+    }
+    var t = words(c.title, '', n); n = t.next;
+    var h = words(c.highlight, '', n); n = h.next;
+    titleEl.innerHTML = t.html + '<br><span class="changing-text">' + h.html + '</span>';
+
+    if(btnEl){
+      btnEl.textContent = c.btn;
+      if(c.href) btnEl.setAttribute('href', c.href);
+      btnEl.classList.remove('hero-reveal');
+      void btnEl.offsetWidth;                       /* restart the animation */
+      btnEl.style.animationDelay = (n*0.075 + 0.15) + 's';
+      btnEl.classList.add('hero-reveal');
+    }
+  }
+
+  /* dots */
+  var dots = document.createElement('div');
+  dots.className = 'hero-dots';
+  slides.forEach(function(_, i){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label','Go to slide '+(i+1));
+    b.addEventListener('click', function(){ go(i); });
+    dots.appendChild(b);
+  });
+  hero.appendChild(dots);
+
+  function paintDots(i){
+    dots.querySelectorAll('button').forEach(function(b, k){
+      b.classList.toggle('active', k === i);
+    });
+  }
+
+  function activeIndex(){
+    for(var i=0;i<slides.length;i++){ if(slides[i].classList.contains('active')) return i; }
+    return 0;
+  }
+
+  function go(i){
+    if(typeof window.showSlide === 'function'){ window.showSlide(i); }
+    else{
+      slides.forEach(function(s){ s.classList.remove('active'); });
+      slides[i].classList.add('active');
+    }
+    sync();
+    if(typeof window.startHeroAuto === 'function') window.startHeroAuto();
+  }
+
+  var last = -1;
+  function sync(){
+    var i = activeIndex();
+    if(i === last) return;
+    last = i;
+    render(i);
+    paintDots(i);
+  }
+
+  /* watch the existing slider so arrows / autoplay / swipe all trigger the text */
+  slides.forEach(function(s){
+    new MutationObserver(sync).observe(s, { attributes:true, attributeFilter:['class'] });
+  });
+
+  sync();
+})();
+</script>
+
 </body>
 </html>
